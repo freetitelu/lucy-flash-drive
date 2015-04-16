@@ -272,7 +272,6 @@ off-set right - responsive utilities
     list-style: none;
     transition: width .5s ease;
     transition-delay: .2s;
-    text-align: center;
 }
 
 @media (max-width: 639px) {
@@ -280,6 +279,7 @@ off-set right - responsive utilities
         float: none;
         margin-left: 0;
         width: 100%;
+        text-align: center;
     }
 }
 .sm1-grid>li {width: 100%}      .sm7-grid>li {width: 14.28571%}
