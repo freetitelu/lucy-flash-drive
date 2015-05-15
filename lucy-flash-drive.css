@@ -1,4 +1,4 @@
-/*CSS-library: "Lucy Flash Drive" v. 0.2.0
+/*CSS-library:"Lucy Flash Drive" v. 0.3.0
 - - - - - - - - - - - - - - - - - -
 ||||||||||||||||||||||||||||||
 || ||||| ||| |||    || ||| ||Flash
@@ -9,192 +9,23 @@
 - - - - - - - - - - - - - - - - - -*/
 
 /*>>= = = = = = = = = = = = = = = = = = = = <<
-
 --Free simple Widths (aka PocketGrid)
         Lucy-code
 = = = = = = = = = = = = = = = = = = = = = = */
 /*padding and border - as part width, if necessary, comment out*/
-*,*:after,*:before {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-/*Service code for "self-made" non-standard grids*/
-.gridx:before,.gridx:after{display:table;content:" ";line-height:0}
-.gridx:after{clear:both}
-.gridx{list-style-type:none;padding:0;margin:0}
-.gridx>.gridx{clear:none;float:left;margin:0!important}
-.wx{float:left;width:100%}
+*,*:after,*:before {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+/*good old float-grid "your-self-made"*/
+.float-grid{width:100%;margin:0 auto;}.float-grid:after{clear:both}
+.float-grid:before,.float-grid:after{display:table;content:" ";line-height:0}
+.float-grid:first-child{padding-left:0}.float-cell:last-child{padding-right:0}
+.float-cell{padding-left:5px;padding-right:5px;width:100%;float:left}
+@media(min-width:640px){.float-cell{padding-left:10px;padding-right:10px}}
+@media(min-width:1024px){.float-cell{padding-left:15px;padding-right:15px}}
 
 /*>>= = = = = = = = = = = = = = = = = = = = <<
-
---Widths - non-responsive, non-grid utilities
-Hey! Default, and great-base system here
-is duodecimal (golden section) calculation - Elfic system
-(like "Lord of the Rings" - Lucy loves cute elfs)
-Continuation and explanation of the history 
-and causes of Lucy is expected soon commits.
-        Lucy-code
-= = = = = = = = = = = = = = = = = = = = = = */
-
-.mw-100{max-width:100%}
-.mw-n{max-width:none}
-.w-0px{max-width:0px;width:100%}
-.w-50px{max-width:50px;width:100%}
-.w-100px{max-width:100px;width:100%}
-.w-150px{max-width:150px;width:100%}
-.w-200px{max-width:200px;width:100%}
-.w-250px{max-width:250px;width:100%}
-.w-300px{max-width:300px;width:100%}
-.w-350px{max-width:350px;width:100%}
-.w-400px{max-width:400px;width:100%}
-.w-450px{max-width:450px;width:100%}
-.w-500px{max-width:500px;width:100%}
-.w-600px{max-width:600px;width:100%}
-.w-700px{max-width:700px;width:100%}
-.w-800px{max-width:800px;width:100%}
-.w-900px{max-width:900px;width:100%}
-.w-1000px{max-width:1000px;width:100%}
-
-/*>>= = = = = = = = = = = = = = = = = = = = <<
-
 --Widths - responsive/fixed grid utilities
         Lucy-code
 = = = = = = = = = = = = = = = = = = = = = = */
-/*example: 
-<wrap>
-    <non-grid-content>
-    <grid><cell>content (and inner grid)</cell></grid>
-</wrap>
-*/
-/*inner ".wrap{max-width:1200px}" for containers create in your custom styles*/
-.wrap{padding-left:10px;padding-right:10px;}
-
-@media(min-width:640px){
-.wrap{padding-left:20px;padding-right:20px;}
-}
-@media(min-width:1024px){
-.wrap{padding-left:30px;padding-right:30px;}
-}
-
-.grid{width:100%;margin:0 auto;}
-.grid:before,.grid:after{content:" ";display:table;clear:both}
-.cell:first-child{padding-left:0}
-.cell:last-child{padding-right:0}
-.cell{padding-left:5px;padding-right:5px;
-width:100%;float:left;transition:width .5s linear;transition-delay:.2s}
-
-/*elfic (doudecimal) system widths*/
-.w1{width:8.33333%}
-.w2{width:16.66667%}
-.w3{width:25%}
-.w4{width:33.33333%}
-.w5{width:41.66667%}
-.w6{width:50%}
-.w7{width:58.33333%}
-.w8{width:66.66667%}
-.w9{width:75%}
-.w10{width:83.33333%}
-.w11{width:91.66667%}
-.w12{width:100%}
-
-/*it's decimal system widths*/
-.w000{width:0%}
-.w005{width:5%}
-.w01{width:10%}
-.w015{width:15%}
-.w02{width:20%}
-.w025{width:25%}
-.w03{width:30%}
-.w035{width:35%}
-.w04{width:40%}
-.w045{width:45%}
-.w05{width:50%}
-.w055{width:55%}
-.w06{width:60%}
-.w065{width:65%}
-.w07{width:70%}
-.w075{width:75%}
-.w08{width:80%}
-.w085{width:85%}
-.w09{width:90%}
-.w095{width:95%}
-.w100{width:100%}
-
-@media(min-width:640px){
-.cell{padding-left:10px;padding-right:10px}
-
-.w-1{width:8.33333%}
-.w-2{width:16.66667%}
-.w-3{width:25%}
-.w-4{width:33.33333%}
-.w-5{width:41.66667%}
-.w-6{width:50%}
-.w-7{width:58.33333%}
-.w-8{width:66.66667%}
-.w-9{width:75%}
-.w-10{width:83.33333%}
-.w-11{width:91.66667%}
-.w-12{width:100%}
-
-.w-000{width:0%}
-.w-005{width:5%}
-.w-01{width:10%}
-.w-015{width:15%}
-.w-02{width:20%}
-.w-025{width:25%}
-.w-03{width:30%}
-.w-035{width:35%}
-.w-04{width:40%}
-.w-045{width:45%}
-.w-05{width:50%}
-.w-055{width:55%}
-.w-06{width:60%}
-.w-065{width:65%}
-.w-07{width:70%}
-.w-075{width:75%}
-.w-08{width:80%}
-.w-085{width:85%}
-.w-09{width:90%}
-.w-095{width:95%}
-.w-100{width:100%}
-}
-
-@media(min-width:1024px){
-.cell{padding-left:15px;padding-right:15px}
-
-.w--1{width:8.33333%}
-.w--2{width:16.66667%}
-.w--3{width:25%}
-.w--4{width:33.33333%}
-.w--5{width:41.66667%}
-.w--6{width:50%}
-.w--7{width:58.33333%}
-.w--8{width:66.66667%}
-.w--9{width:75%}
-.w--10{width:83.33333%}
-.w--11{width:91.66667%}
-.w--12{width:100%}
-
-.w--000{width:0%}
-.w--005{width:5%}
-.w--01{width:10%}
-.w--015{width:15%}
-.w--02{width:20%}
-.w--025{width:25%}
-.w--03{width:30%}
-.w--035{width:35%}
-.w--04{width:40%}
-.w--045{width:45%}
-.w--05{width:50%}
-.w--055{width:55%}
-.w--06{width:60%}
-.w--065{width:65%}
-.w--07{width:70%}
-.w--075{width:75%}
-.w--08{width:80%}
-.w--085{width:85%}
-.w--09{width:90%}
-.w--095{width:95%}
-.w--100{width:100%}
-}
-
 /*>>= = = = = = = = = = = = = = = = = = = = <<
 
 --Positions aka push, pull, off-set left, 
@@ -202,35 +33,69 @@ off-set right - responsive utilities
         Lucy-code
 = = = = = = = = = = = = = = = = = = = = = = */
 
-.l1,.l2,.l3,.l4,.l5,.l6,.l7,.l8,.l9,.l10,.l11
-{right:auto;position:relative;padding-left:5px}
-.r1,.r2,.r3,.r4,.r5,.r6,.r7,.r8,.r9,.r10,.r11
-{left:auto;position:relative;padding-right:5px}
+/*example:
+<wrap>
+    <non-grid-content>
+    <grid><cell>content (and inner grid)</cell></grid>
+</wrap>
+*/
+.wrap{max-width:1200px;padding-left:10px;padding-right:10px;margin-left:auto;margin-right:auto;width:100%}
+.grid{margin: 0 -5px; padding:5px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}
+.cell{padding-left:5px;padding-right:5px;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+/*widths of cells (<div class="cell w1">)*/
+.w1{-webkit-flex-basis:8.33333%;-ms-flex-preferred-size:8.33333%;flex-basis:8.33333%;max-width:8.33333%}
+.w2{-webkit-flex-basis:16.66667%;-ms-flex-preferred-size:16.66667%;flex-basis:16.66667%;max-width:16.66667%}
+.w3{-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}
+.w4{-webkit-flex-basis:33.33333%;-ms-flex-preferred-size:33.33333%;flex-basis:33.33333%;max-width:33.33333%}
+.w5{-webkit-flex-basis:41.66667%;-ms-flex-preferred-size:41.66667%;flex-basis:41.66667%;max-width:41.66667%}
+.w6{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
+.w7{-webkit-flex-basis:58.33333%;-ms-flex-preferred-size:58.33333%;flex-basis:58.33333%;max-width:58.33333%}
+.w8{-webkit-flex-basis:66.66667%;-ms-flex-preferred-size:66.66667%;flex-basis:66.66667%;max-width:66.66667%}
+.w9{-webkit-flex-basis:75%;-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}
+.w10{-webkit-flex-basis:83.33333%;-ms-flex-preferred-size:83.33333%;flex-basis:83.33333%;max-width:83.33333%}
+.w11{-webkit-flex-basis:91.66667%;-ms-flex-preferred-size:91.66667%;flex-basis:91.66667%;max-width:91.66667%}
+.w12{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 
-.l1{left:8.33333%}
-.l2{left:16.66667%}
-.l3{left:25%}
-.l4{left:33.33333%}
-.l5{left:41.66667%}
-.l6{left:50%}
-.l7{left:58.33333%}
-.l8{left:66.66667%}
-.l9{left:75%}
-.l10{left:83.33333%}
-.l11{left:91.66667%}
+@media(min-width:640px){
+.grid {margin: 0 -10px; padding:10px 0}
+.cell{padding-left:10px;padding-right:10px}
 
-.r1{right:8.33333%}
-.r2{right:16.66667%}
-.r3{right:25%}
-.r4{right:33.33333%}
-.r5{right:41.66667%}
-.r6{right:50%}
-.r7{right:58.33333%}
-.r8{right:66.66667%}
-.r9{right:75%}
-.r10{right:83.33333%}
-.r11{right:91.66667%}
+.w-1{-webkit-flex-basis:8.33333%;-ms-flex-preferred-size:8.33333%;flex-basis:8.33333%;max-width:8.33333%}
+.w-2{-webkit-flex-basis:16.66667%;-ms-flex-preferred-size:16.66667%;flex-basis:16.66667%;max-width:16.66667%}
+.w-3{-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}
+.w-4{-webkit-flex-basis:33.33333%;-ms-flex-preferred-size:33.33333%;flex-basis:33.33333%;max-width:33.33333%}
+.w-5{-webkit-flex-basis:41.66667%;-ms-flex-preferred-size:41.66667%;flex-basis:41.66667%;max-width:41.66667%}
+.w-6{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
+.w-7{-webkit-flex-basis:58.33333%;-ms-flex-preferred-size:58.33333%;flex-basis:58.33333%;max-width:58.33333%}
+.w-8{-webkit-flex-basis:66.66667%;-ms-flex-preferred-size:66.66667%;flex-basis:66.66667%;max-width:66.66667%}
+.w-9{-webkit-flex-basis:75%;-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}
+.w-10{-webkit-flex-basis:83.33333%;-ms-flex-preferred-size:83.33333%;flex-basis:83.33333%;max-width:83.33333%}
+.w-11{-webkit-flex-basis:91.66667%;-ms-flex-preferred-size:91.66667%;flex-basis:91.66667%;max-width:91.66667%}
+.w-12{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+}
 
+@media(min-width:1024px){
+.grid{margin: 0 -15px; padding:15px 0}
+.cell{padding-left:15px;padding-right:15px}
+
+.w--1{-webkit-flex-basis:8.33333%;-ms-flex-preferred-size:8.33333%;flex-basis:8.33333%;max-width:8.33333%}
+.w--2{-webkit-flex-basis:16.66667%;-ms-flex-preferred-size:16.66667%;flex-basis:16.66667%;max-width:16.66667%}
+.w--3{-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}
+.w--4{-webkit-flex-basis:33.33333%;-ms-flex-preferred-size:33.33333%;flex-basis:33.33333%;max-width:33.33333%}
+.w--5{-webkit-flex-basis:41.66667%;-ms-flex-preferred-size:41.66667%;flex-basis:41.66667%;max-width:41.66667%}
+.w--6{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
+.w--7{-webkit-flex-basis:58.33333%;-ms-flex-preferred-size:58.33333%;flex-basis:58.33333%;max-width:58.33333%}
+.w--8{-webkit-flex-basis:66.66667%;-ms-flex-preferred-size:66.66667%;flex-basis:66.66667%;max-width:66.66667%}
+.w--9{-webkit-flex-basis:75%;-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}
+.w--10{-webkit-flex-basis:83.33333%;-ms-flex-preferred-size:83.33333%;flex-basis:83.33333%;max-width:83.33333%}
+.w--11{-webkit-flex-basis:91.66667%;-ms-flex-preferred-size:91.66667%;flex-basis:91.66667%;max-width:91.66667%}
+.w--12{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+}
+
+/*>>= = = = = = = = = = = = = = = = = = = = <<
+    offsets of cells (<div class="cell w1 ml1">)
+        Lucy-code
+= = = = = = = = = = = = = = = = = = = = = = */
 .ml1{margin-left:8.33333%}
 .ml2{margin-left:16.66667%}
 .ml3{margin-left:25%}
@@ -243,48 +108,16 @@ off-set right - responsive utilities
 .ml10{margin-left:83.33333%}
 .ml11{margin-left:91.66667%}
 
-.mr1{margin-right:8.33333%}
-.mr2{margin-right:16.66667%}
-.mr3{margin-right:25%}
-.mr4{margin-right:33.33333%}
-.mr5{margin-right:41.66667%}
-.mr6{margin-right:50%}
-.mr7{margin-right:58.33333%}
-.mr8{margin-right:66.66667%}
-.mr9{margin-right:75%}
-.mr10{margin-right:83.33333%}
-.mr11{margin-right:91.66667%}
+/*the flex alignment along the x/y axis:start(0%), center(50%), end(100%)*/
+.x0{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}
+.x50{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center}
+.x100{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}
+
+.y0{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
+.y50{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+.y100{-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
 
 @media(min-width:640px){
-.l-1,.l-2,.l-3,.l-4,.l-5,.l-6,.l-7,.l-8,.l-9,.l-10,.l-11
-{right:auto;position:relative;padding-left:10px}
-.r-1,.r-2,.r-3,.r-4,.r-5,.r-6,.r-7,.r-8,.r-9,.r-10,.r-11
-{left:auto;position:relative;padding-right:10px}
-
-.l-1{left:8.33333%}
-.l-2{left:16.66667%}
-.l-3{left:25%}
-.l-4{left:33.33333%}
-.l-5{left:41.66667%}
-.l-6{left:50%}
-.l-7{left:58.33333%}
-.l-8{left:66.66667%}
-.l-9{left:75%}
-.l-10{left:83.33333%}
-.l-11{left:91.66667%}
-
-.r-1{right:8.33333%}
-.r-2{right:16.66667%}
-.r-3{right:25%}
-.r-4{right:33.33333%}
-.r-5{right:41.66667%}
-.r-6{right:50%}
-.r-7{right:58.33333%}
-.r-8{right:66.66667%}
-.r-9{right:75%}
-.r-10{right:83.33333%}
-.r-11{right:91.66667%}
-
 .ml-1{margin-left:8.33333%}
 .ml-2{margin-left:16.66667%}
 .ml-3{margin-left:25%}
@@ -297,52 +130,15 @@ off-set right - responsive utilities
 .ml-10{margin-left:83.33333%}
 .ml-11{margin-left:91.66667%}
 
-.mr-1{margin-right:8.33333%}
-.mr-2{margin-right:16.66667%}
-.mr-3{margin-right:25%}
-.mr-4{margin-right:33.33333%}
-.mr-5{margin-right:41.66667%}
-.mr-6{margin-right:50%}
-.mr-7{margin-right:58.33333%}
-.mr-8{margin-right:66.66667%}
-.mr-9{margin-right:75%}
-.mr-10{margin-right:83.33333%}
-.mr-11{margin-right:91.66667%}
+.x-0{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}
+.x-50{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center}
+.x-100{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}
+
+.y-0{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
+.y-50{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+.y-100{-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
 }
-
 @media(min-width:1024px){
-.l--1,.l--2,.l--3,.l--4,.l--5,.l--6,.l--7,.l--8,.l--9,.l--10,.l--11
-{right:auto;position:relative;padding-left:15px}
-.r--1,.r--2,.r--3,.r--4,.r--5,.r--6,.r--7,.r--8,.r--9,.r--10,.r--11
-{left:auto;position:relative;padding-right:15px}
-
-.l--0{left:0%}
-.l--1{left:8.33333%}
-.l--2{left:16.66667%}
-.l--3{left:25%}
-.l--4{left:33.33333%}
-.l--5{left:41.66667%}
-.l--6{left:50%}
-.l--7{left:58.33333%}
-.l--8{left:66.66667%}
-.l--9{left:75%}
-.l--10{left:83.33333%}
-.l--11{left:91.66667%}
-
-.r--0{right:0%}
-.r--1{right:8.33333%}
-.r--2{right:16.66667%}
-.r--3{right:25%}
-.r--4{right:33.33333%}
-.r--5{right:41.66667%}
-.r--6{right:50%}
-.r--7{right:58.33333%}
-.r--8{right:66.66667%}
-.r--9{right:75%}
-.r--10{right:83.33333%}
-.r--11{right:91.66667%}
-
-.ml--0{margin-left:0%}
 .ml--1{margin-left:8.33333%}
 .ml--2{margin-left:16.66667%}
 .ml--3{margin-left:25%}
@@ -355,171 +151,132 @@ off-set right - responsive utilities
 .ml--10{margin-left:83.33333%}
 .ml--11{margin-left:91.66667%}
 
-.mr--0{margin-right:0%}
-.mr--1{margin-right:8.33333%}
-.mr--2{margin-right:16.66667%}
-.mr--3{margin-right:25%}
-.mr--4{margin-right:33.33333%}
-.mr--5{margin-right:41.66667%}
-.mr--6{margin-right:50%}
-.mr--7{margin-right:58.33333%}
-.mr--8{margin-right:66.66667%}
-.mr--9{margin-right:75%}
-.mr--10{margin-right:83.33333%}
-.mr--11{margin-right:91.66667%}
-}
+.x--0{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}
+.x--50{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center}
+.x--100{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}
 
+.y--0{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
+.y--50{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+.y--100{-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
+}
 
 /*>>= = = = = = = = = = = = = = = = = = = = <<
-
-Grids for galleries - responsive utilities 
-(example <ul class="grid ul li--4"><li>)
+    flex orders
         Lucy-code
 = = = = = = = = = = = = = = = = = = = = = = */
-/*.grid:before,.grid:after{content:" ";display:table}
-.grid:after {clear: both}*/
+.orders{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.order1,.order2,.order3,.order4,.order5,.order6,.order7,.order8,.order9,.order10,.order11,.order12,.order1st,.order99{
+-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+.order1{-ms-flex-order:1;-webkit-order:1;order:1}
+.order2{-ms-flex-order:2;-webkit-order:2;order:2}
+.order3{-ms-flex-order:3;-webkit-order:3;order:3}
+.order4{-ms-flex-order:4;-webkit-order:4;order:4}
+.order5{-ms-flex-order:5;-webkit-order:5;order:5}
+.order6{-ms-flex-order:6;-webkit-order:6;order:6}
+.order7{-ms-flex-order:7;-webkit-order:7;order:7}
+.order8{-ms-flex-order:8;-webkit-order:8;order:8}
+.order9{-ms-flex-order:9;-webkit-order:9;order:9}
+.order10{-ms-flex-order:10;-webkit-order:10;order:10}
+.order11{-ms-flex-order:11;-webkit-order:11;order:11}
+.order12{-ms-flex-order:12;-webkit-order:12;order:12}
+/*orders first and last*/
+.order1st{-ms-flex-order:-1;-webkit-order:-1;order:-1}
+.order99{-ms-flex-order:99;-webkit-order:99;order:99}
 
-.ul{display:block;padding: 5px 0;margin:0 -5px;
-background:red;
-  overflow: hidden;
-  border: 1px solid #000;
-}
-
-@media(max-width:639px){
-  .ul>li{
-    width:100%;
-    text-align:center;
-    clear:right;
-  }
-}
-.ul>li{
-display:block;
-height:auto;
-float:left;
-padding:5px;
-list-style:none;
-transition:width .5s linear;
-transition-delay:.2s;
-}
-
-.li1>li{width:100%;clear:right}
-.li2>li{width:50%}
-.li2>li:nth-of-type(2n){clear:right}
-.li3>li{width:33.33333%}
-.li3>li:nth-of-type(3n){clear:right}
-.li4>li{width:25%}
-.li4>li:nth-of-type(4n){clear:right}
-.li5>li{width:20%}
-.li5>li:nth-of-type(5n){clear:right}
-.li6>li{width:16.66667%}
-.li6>li:nth-of-type(6n){clear:right}
-.li7>li{width:14.28571%}
-.li7>li:nth-of-type(7n){clear:right}
-.li8>li{width:12.5%}
-.li8>li:nth-of-type(8n){clear:right}
-.li9>li{width:11.11111%}
-.li9>li:nth-of-type(9n){clear:right}
-.li10>li{width:10%}
-.li10>li:nth-of-type(10n){clear:right}
-.li11>li{width:9.09091%}
-.li11>li:nth-of-type(11n){clear:right}
-.li12>li{width:8.33333%}
-.li12>li:nth-of-type(12n){clear:right}
-
-.wrap {
-  width:100%;
-  max-width:1200px;
-  padding-left: 10px;
-  padding-right: 10px;
-  display:block;
-  margin:auto;
-  background: green;
-
-}
 @media(min-width:640px){
-.ul{padding:10px 0; margin:0 -10px;}
-.ul>li{padding:10px;}
-  
-.li-1>li{width:100%;clear:right}
-.li-2>li{width:50%}
-.li-2>li:nth-of-type(2n){clear:right}
-.li-3>li{width:33.33333%}
-.li-3>li:nth-of-type(3n){clear:right}
-.li-4>li{width:25%}
-.li-4>li:nth-of-type(4n){clear:right}
-.li-5>li{width:20%}
-.li-5>li:nth-of-type(5n){clear:right}
-.li-6>li{width:16.66667%}
-.li-6>li:nth-of-type(6n){clear:right}
-.li-7>li{width:14.28571%}
-.li-7>li:nth-of-type(7n){clear:right}
-.li-8>li{width:12.5%}
-.li-8>li:nth-of-type(8n){clear:right}
-.li-9>li{width:11.11111%}
-.li-9>li:nth-of-type(9n){clear:right}
-.li-10>li{width:10%}
-.li-10>li:nth-of-type(10n){clear:right}
-.li-11>li{width:9.09091%}
-.li-11>li:nth-of-type(11n){clear:right}
-.li-12>li{width:8.33333%}
-.li-12>li:nth-of-type(12n){clear:right}
-  
-  .wrap {
-  width:100%;
-  max-width:1200px;
-  padding-left: 20px;
-  padding-right: 20px;
-  display:block;
-  margin:auto;
-  background: green;
-}
+.order-1,.order-2,.order-3,.order-4,.order-5,.order-6,.order-7,.order-8,.order-9,.order-10,.order-11,.order-12,.order-1st,.order-99{
+-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+.order-1{-ms-flex-order:1;-webkit-order:1;order:1}
+.order-2{-ms-flex-order:2;-webkit-order:2;order:2}
+.order-3{-ms-flex-order:3;-webkit-order:3;order:3}
+.order-4{-ms-flex-order:4;-webkit-order:4;order:4}
+.order-5{-ms-flex-order:5;-webkit-order:5;order:5}
+.order-6{-ms-flex-order:6;-webkit-order:6;order:6}
+.order-7{-ms-flex-order:7;-webkit-order:7;order:7}
+.order-8{-ms-flex-order:8;-webkit-order:8;order:8}
+.order-9{-ms-flex-order:9;-webkit-order:9;order:9}
+.order-10{-ms-flex-order:10;-webkit-order:10;order:10}
+.order-11{-ms-flex-order:11;-webkit-order:11;order:11}
+.order-12{-ms-flex-order:12;-webkit-order:12;order:12}
+
+.order-1st{-ms-flex-order:-1;-webkit-order:-1;order:-1}
+.order-99{-ms-flex-order:99;-webkit-order:99;order:99}
 }
 @media(min-width:1024px){
-.ul{padding:15px 0; margin:0 -15px;}
-.ul>li{padding:15px;}
+.order--1,.order--2,.order--3,.order--4,.order--5,.order--6,.order--7,.order--8,.order--9,.order--10,.order--11,.order--12,.order--1st,.order--99{
+-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+.order--1{-ms-flex-order:1;-webkit-order:1;order:1}
+.order--2{-ms-flex-order:2;-webkit-order:2;order:2}
+.order--3{-ms-flex-order:3;-webkit-order:3;order:3}
+.order--4{-ms-flex-order:4;-webkit-order:4;order:4}
+.order--5{-ms-flex-order:5;-webkit-order:5;order:5}
+.order--6{-ms-flex-order:6;-webkit-order:6;order:6}
+.order--7{-ms-flex-order:7;-webkit-order:7;order:7}
+.order--8{-ms-flex-order:8;-webkit-order:8;order:8}
+.order--9{-ms-flex-order:9;-webkit-order:9;order:9}
+.order--10{-ms-flex-order:10;-webkit-order:10;order:10}
+.order--11{-ms-flex-order:11;-webkit-order:11;order:11}
+.order--12{-ms-flex-order:12;-webkit-order:12;order:12}
 
-.li--1>li{width:100%;clear:right}
-.li--2>li{width:50%}
-.li--2>li:nth-of-type(2n){clear:right}
-.li--3>li{width:33.33333%}
-.li--3>li:nth-of-type(3n){clear:right}
-.li--4>li{width:25%}
-.li--4>li:nth-of-type(4n){clear:right}
-.li--5>li{width:20%}
-.li--5>li:nth-of-type(5n){clear:right}
-.li--6>li{width:16.66667%}
-.li--6>li:nth-of-type(6n){clear:right}
-.li--7>li{width:14.28571%}
-.li--7>li:nth-of-type(7n){clear:right}
-.li--8>li{width:12.5%}
-.li--8>li:nth-of-type(8n){clear:right}
-.li--9>li{width:11.11111%}
-.li--9>li:nth-of-type(9n){clear:right}
-.li--10>li{width:10%}
-.li--10>li:nth-of-type(10n){clear:right}
-.li--11>li{width:9.09091%}
-.li--11>li:nth-of-type(11n){clear:right}
-.li--12>li{width:8.33333%}
-.li--12>li:nth-of-type(12n){clear:right}
-  
-  .wrap {
-  width:100%;
-  max-width:1200px;
-  padding-left: 30px;
-  padding-right: 30px;
-  display:block;
-  margin:auto;
-  background: green;
-}
+.order--1st{-ms-flex-order:-1;-webkit-order:-1;order:-1}
+.order--99{-ms-flex-order:99;-webkit-order:99;order:99}
 }
 
+/*>>= = = = = = = = = = = = = = = = = = = = <<
+Grids for galleries - responsive utilities 
+(example <ul class="grid li--4"><li>)
+        Lucy-code
+= = = = = = = = = = = = = = = = = = = = = = */
+.grid>li{padding:5px;list-style:none;}
+.li1>li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+.li2>li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
+.li3>li{-webkit-flex-basis:33.33333%;-ms-flex-preferred-size:33.33333%;flex-basis:33.33333%;max-width:33.33333%}
+.li4>li{-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}
+.li5>li{-webkit-flex-basis:20%;-ms-flex-preferred-size:20%;flex-basis:20%;max-width:20%}
+.li6>li{-webkit-flex-basis:16.66667%;-ms-flex-preferred-size:16.66667%;flex-basis:16.66667%;max-width:16.66667%}
+.li7>li{-webkit-flex-basis:14.28571%;-ms-flex-preferred-size:14.28571%;flex-basis:14.28571%;max-width:14.28571%}
+.li8>li{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
+.li9>li{-webkit-flex-basis:11.11111%;-ms-flex-preferred-size:11.11111%;flex-basis:11.11111%;max-width:11.11111%}
+.li10>li{-webkit-flex-basis:10%;-ms-flex-preferred-size:10%;flex-basis:10%;max-width:10%}
+.li11>li{-webkit-flex-basis:9.09091%;-ms-flex-preferred-size:9.09091%;flex-basis:9.09091%;max-width:9.09091%}
+.li12>li{-webkit-flex-basis:8.33333%;-ms-flex-preferred-size:8.33333%;flex-basis:8.33333%;max-width:8.33333%}
+
+@media(min-width:640px){
+.grid>li{padding:10px}
+.li-1>li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+.li-2>li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
+.li-3>li{-webkit-flex-basis:33.33333%;-ms-flex-preferred-size:33.33333%;flex-basis:33.33333%;max-width:33.33333%}
+.li-4>li{-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}
+.li-5>li{-webkit-flex-basis:20%;-ms-flex-preferred-size:20%;flex-basis:20%;max-width:20%}
+.li-6>li{-webkit-flex-basis:16.66667%;-ms-flex-preferred-size:16.66667%;flex-basis:16.66667%;max-width:16.66667%}
+.li-7>li{-webkit-flex-basis:14.28571%;-ms-flex-preferred-size:14.28571%;flex-basis:14.28571%;max-width:14.28571%}
+.li-8>li{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
+.li-9>li{-webkit-flex-basis:11.11111%;-ms-flex-preferred-size:11.11111%;flex-basis:11.11111%;max-width:11.11111%}
+.li-10>li{-webkit-flex-basis:10%;-ms-flex-preferred-size:10%;flex-basis:10%;max-width:10%}
+.li-11>li{-webkit-flex-basis:9.09091%;-ms-flex-preferred-size:9.09091%;flex-basis:9.09091%;max-width:9.09091%}
+.li-12>li{-webkit-flex-basis:8.33333%;-ms-flex-preferred-size:8.33333%;flex-basis:8.33333%;max-width:8.33333%}
+}
+@media(min-width:1024px){
+.grid>li{padding:15px}
+.li--1>li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+.li--2>li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
+.li--3>li{-webkit-flex-basis:33.33333%;-ms-flex-preferred-size:33.33333%;flex-basis:33.33333%;max-width:33.33333%}
+.li--4>li{-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}
+.li--5>li{-webkit-flex-basis:20%;-ms-flex-preferred-size:20%;flex-basis:20%;max-width:20%}
+.li--6>li{-webkit-flex-basis:16.66667%;-ms-flex-preferred-size:16.66667%;flex-basis:16.66667%;max-width:16.66667%}
+.li--7>li{-webkit-flex-basis:14.28571%;-ms-flex-preferred-size:14.28571%;flex-basis:14.28571%;max-width:14.28571%}
+.li--8>li{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
+.li--9>li{-webkit-flex-basis:11.11111%;-ms-flex-preferred-size:11.11111%;flex-basis:11.11111%;max-width:11.11111%}
+.li--10>li{-webkit-flex-basis:10%;-ms-flex-preferred-size:10%;flex-basis:10%;max-width:10%}
+.li--11>li{-webkit-flex-basis:9.09091%;-ms-flex-preferred-size:9.09091%;flex-basis:9.09091%;max-width:9.09091%}
+.li--12>li{-webkit-flex-basis:8.33333%;-ms-flex-preferred-size:8.33333%;flex-basis:8.33333%;max-width:8.33333%}
+}
 
 /*>>= = = = = = = = = = = = = = = = = = = = <<
 
 --display-none - responsive utilities
         Lucy-code
 = = = = = = = = = = = = = = = = = = = = = = */
-
 .dn{display:none!important}
 @media(max-width:1023px){
 .d-n{display:none!important}
@@ -529,11 +286,9 @@ transition-delay:.2s;
 }
 
 /*>>= = = = = = = = = = = = = = = = = = = = <<
-
 --margin --padding - responsive utilities
         Lucy-code
 = = = = = = = = = = = = = = = = = = = = = = */
-
 .m0{margin:0!important}
 .ma{margin:auto!important}
 .m0a{margin:0 auto!important}
@@ -748,16 +503,17 @@ transition-delay:.2s;
 }
 
 /*>>= = = = = = = = = = = = = = = = = = = = <<
-
 --text - responsive utilities
         Lucy-code
 = = = = = = = = = = = = = = = = = = = = = = */
-
 .tal{text-align:left!important}
 .tar{text-align:right!important}
 .tac{text-align:center!important}
 .taj{text-align:justify!important}
 .ttu{text-transform:uppercase}
+.ttn{text-transform:none}
+.fsl{font-size: larger!important}
+.fss{font-size: smaller!important}
 .fw100{font-weight:100!important}
 .fw400{font-weight:400!important}
 .fw700{font-weight:700!important}
@@ -770,6 +526,9 @@ transition-delay:.2s;
 .ta-c{text-align:center!important}
 .ta-j{text-align:justify!important}
 .tt-u{text-transform:uppercase}
+.tt-n{text-transform:none}
+.fs-l{font-size: larger!important}
+.fs-s{font-size: smaller!important}
 .fw-100{font-weight:100!important}
 .fw-400{font-weight:400!important}
 .fw-700{font-weight:700!important}
@@ -782,6 +541,9 @@ transition-delay:.2s;
 .ta--c{text-align:center!important}
 .ta--j{text-align:justify!important}
 .tt--u{text-transform:uppercase}
+.tt--n{text-transform:none}
+.fs--l{font-size: larger!important}
+.fs--s{font-size: smaller!important}
 .fw--100{font-weight:100!important}
 .fw--400{font-weight:400!important}
 .fw--700{font-weight:700!important}
@@ -790,11 +552,9 @@ transition-delay:.2s;
 }
 
 /*>>= = = = = = = = = = = = = = = = = = = = <<
-
 --other responsive utilities
         Lucy-code
 = = = = = = = = = = = = = = = = = = = = = = */
-
 .db{display:block!important}
 .dt{display:table!important}
 .di{display:inline!important}
@@ -802,8 +562,7 @@ transition-delay:.2s;
 .fl{float:left!important}
 .fr{float:right!important}
 .pr{position:relative!important}
-.cb:before,.cb:after{content:" ";display:table}
-.cb:after{clear:both}
+.cb:after{clear:both}.cb:before,.cb:after{content:" ";display:table}
 
 @media(min-width:640px){
 .d-b{display:block!important}
@@ -813,8 +572,7 @@ transition-delay:.2s;
 .f-l{float:left!important}
 .f-r{float:right!important}
 .p-r{position:relative!important}
-.c-b:before,.c-b:after{content:"";display:table}
-.c-b:after{clear:both}
+.c-b:after{clear:both}.c-b:before,.c-b:after{content:" ";display:table}
 }
 
 @media(min-width:1024px){
@@ -825,8 +583,7 @@ transition-delay:.2s;
 .f--l{float:left!important}
 .f--r{float:right!important}
 .p--r{position:relative!important}
-.c--b:before,.c--b:after{content:" ";display:table}
-.c--b:after{clear:both}
+.c--b:after{clear:both}.c--b:before,.c--b:after{content:" ";display:table}
 }
 
 /*|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
