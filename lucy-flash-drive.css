@@ -15,33 +15,26 @@
 /*padding and border - as part width, if necessary, comment out*/
 *,*:after,*:before {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 /*good old float-grid "your-self-made"*/
-.float-grid{width:100%;margin:0 auto;}.float-grid:after{clear:both}
+.float-grid{width:100%;margin-left:-5px;margin-right:-5px}.float-grid:after{clear:both}
 .float-grid:before,.float-grid:after{display:table;content:" ";line-height:0}
-.float-grid:first-child{padding-left:0}.float-cell:last-child{padding-right:0}
+.float-cell:first-child{padding-left:0}.float-cell:last-child{padding-right:0}
 .float-cell{padding-left:5px;padding-right:5px;width:100%;float:left}
-@media(min-width:640px){.float-cell{padding-left:10px;padding-right:10px}}
-@media(min-width:1024px){.float-cell{padding-left:15px;padding-right:15px}}
+@media(min-width:640px){.float-grid{margin-left:-10px;margin-right:-10px}.float-cell{padding-left:10px;padding-right:10px}}
+@media(min-width:1024px){.float-grid{margin-left:-15px;margin-right:-15px}.float-cell{padding-left:15px;padding-right:15px}}
 
 /*>>= = = = = = = = = = = = = = = = = = = = <<
---Widths - responsive/fixed grid utilities
+--Widths - responsive/fixed flex-grid utilities
         Lucy-code
 = = = = = = = = = = = = = = = = = = = = = = */
-/*>>= = = = = = = = = = = = = = = = = = = = <<
-
---Positions aka push, pull, off-set left, 
-off-set right - responsive utilities 
-        Lucy-code
-= = = = = = = = = = = = = = = = = = = = = = */
-
 /*example:
 <wrap>
     <non-grid-content>
     <grid><cell>content (and inner grid)</cell></grid>
 </wrap>
 */
-.wrap{max-width:1200px;padding-left:10px;padding-right:10px;margin-left:auto;margin-right:auto;width:100%}
-.grid{margin: 0 -5px; padding:5px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}
-.cell{padding-left:5px;padding-right:5px;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+.wrap{max-width:1200px;padding-left:10px;padding-right:10px;margin-left:auto;margin-right:auto;width:100%;overflow:hidden}
+.grid{margin:0 -5px; padding:5px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}
+.cell{padding-left:5px;padding-right:5px;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%;overflow:hidden}
 /*widths of cells (<div class="cell w1">)*/
 .w1{-webkit-flex-basis:8.33333%;-ms-flex-preferred-size:8.33333%;flex-basis:8.33333%;max-width:8.33333%}
 .w2{-webkit-flex-basis:16.66667%;-ms-flex-preferred-size:16.66667%;flex-basis:16.66667%;max-width:16.66667%}
@@ -57,7 +50,7 @@ off-set right - responsive utilities
 .w12{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 
 @media(min-width:640px){
-.grid {margin: 0 -10px; padding:10px 0}
+.grid {margin:0 -10px; padding:10px 0}
 .cell{padding-left:10px;padding-right:10px}
 
 .w-1{-webkit-flex-basis:8.33333%;-ms-flex-preferred-size:8.33333%;flex-basis:8.33333%;max-width:8.33333%}
@@ -75,7 +68,7 @@ off-set right - responsive utilities
 }
 
 @media(min-width:1024px){
-.grid{margin: 0 -15px; padding:15px 0}
+.grid{margin:0 -15px; padding:15px 0}
 .cell{padding-left:15px;padding-right:15px}
 
 .w--1{-webkit-flex-basis:8.33333%;-ms-flex-preferred-size:8.33333%;flex-basis:8.33333%;max-width:8.33333%}
@@ -227,7 +220,7 @@ Grids for galleries - responsive utilities
 (example <ul class="grid li--4"><li>)
         Lucy-code
 = = = = = = = = = = = = = = = = = = = = = = */
-.grid>li{padding:5px;list-style:none;}
+.grid>li{padding:5px;list-style:none;overflow:hidden}
 .li1>li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 .li2>li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
 .li3>li{-webkit-flex-basis:33.33333%;-ms-flex-preferred-size:33.33333%;flex-basis:33.33333%;max-width:33.33333%}
@@ -512,8 +505,8 @@ Grids for galleries - responsive utilities
 .taj{text-align:justify!important}
 .ttu{text-transform:uppercase}
 .ttn{text-transform:none}
-.fsl{font-size: larger!important}
-.fss{font-size: smaller!important}
+.fsl{font-size:larger!important}
+.fss{font-size:smaller!important}
 .fw100{font-weight:100!important}
 .fw400{font-weight:400!important}
 .fw700{font-weight:700!important}
@@ -527,8 +520,8 @@ Grids for galleries - responsive utilities
 .ta-j{text-align:justify!important}
 .tt-u{text-transform:uppercase}
 .tt-n{text-transform:none}
-.fs-l{font-size: larger!important}
-.fs-s{font-size: smaller!important}
+.fs-l{font-size:larger!important}
+.fs-s{font-size:smaller!important}
 .fw-100{font-weight:100!important}
 .fw-400{font-weight:400!important}
 .fw-700{font-weight:700!important}
@@ -542,8 +535,8 @@ Grids for galleries - responsive utilities
 .ta--j{text-align:justify!important}
 .tt--u{text-transform:uppercase}
 .tt--n{text-transform:none}
-.fs--l{font-size: larger!important}
-.fs--s{font-size: smaller!important}
+.fs--l{font-size:larger!important}
+.fs--s{font-size:smaller!important}
 .fw--100{font-weight:100!important}
 .fw--400{font-weight:400!important}
 .fw--700{font-weight:700!important}
