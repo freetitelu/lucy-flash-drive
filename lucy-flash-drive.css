@@ -512,6 +512,8 @@ Grids for galleries - responsive utilities
 .fw700{font-weight:700!important}
 .fsi{font-style:italic!important}
 .fsn{font-style:normal!important}
+.cfff{color:#fff}
+.c000{color:#fff}
 
 @media(min-width:640px){
 .ta-l{text-align:left!important}
@@ -527,6 +529,8 @@ Grids for galleries - responsive utilities
 .fw-700{font-weight:700!important}
 .fs-i{font-style:italic!important}
 .fs-n{font-style:normal!important}
+.c-fff{color:#fff}
+.c-000{color:#fff}
 }
 @media(min-width:1024px){
 .ta--l{text-align:left!important}
@@ -542,6 +546,8 @@ Grids for galleries - responsive utilities
 .fw--700{font-weight:700!important}
 .fs--i{font-style:italic!important}
 .fs--n{font-style:normal!important}
+.c--fff{color:#fff}
+.c--000{color:#fff}
 }
 
 /*>>= = = = = = = = = = = = = = = = = = = = <<
@@ -551,20 +557,26 @@ Grids for galleries - responsive utilities
 .db{display:block!important}
 .dt{display:table!important}
 .di{display:inline!important}
+.dib{display:inline-block!important}
 .fn{float:none!important}
 .fl{float:left!important}
 .fr{float:right!important}
 .pr{position:relative!important}
+.o0{opacity:0}
+.o1{opacity:1}
 .cb:after{clear:both}.cb:before,.cb:after{content:" ";display:table}
 
 @media(min-width:640px){
 .d-b{display:block!important}
 .d-t{display:table!important}
 .d-i{display:inline!important}
+.d-ib{display:inline-block!important}
 .f-n{float:none!important}
 .f-l{float:left!important}
 .f-r{float:right!important}
 .p-r{position:relative!important}
+.o-0{opacity:0}
+.o-1{opacity:1}
 .c-b:after{clear:both}.c-b:before,.c-b:after{content:" ";display:table}
 }
 
@@ -572,10 +584,13 @@ Grids for galleries - responsive utilities
 .d--b{display:block!important}
 .d--t{display:table!important}
 .d--i{display:inline!important}
+.d--ib{display:inline-block!important}
 .f--n{float:none!important}
 .f--l{float:left!important}
 .f--r{float:right!important}
 .p--r{position:relative!important}
+.o--0{opacity:0}
+.o--1{opacity:1}
 .c--b:after{clear:both}.c--b:before,.c--b:after{content:" ";display:table}
 }
 
