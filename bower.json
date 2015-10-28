@@ -1,0 +1,25 @@
+{
+  "name": "lucy-flash-drive",
+  "version": "0.6.0",
+  "homepage": "https://github.com/Lucyway/lucy-flash-drive",
+  "authors": [
+    "freetitelu <freetitelu@gmail.com>"
+  ],
+  "description": "It's flash drive made Lucy",
+  "main": "dist/lucy-flash-drive.min.css",
+  "keywords": [
+    "browser",
+    "css",
+    "helpers",
+    "grid",
+    "flexbox"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,29 @@
+/*CSS-library:"Lucy Flash Drive" v. 0.5.1
+- - - - - - - - - - - - - - - - - -
+||||||||||||||||||||||||||||||
+|| ||||| ||| |||    || ||| ||Flash
+|| ||||| ||| ||| |||||| | |||||| |
+|| ||||| ||| ||| ||||||| ||||||| |
+||    |||   ||||    |||| ||||Drive
+||||||||||||||||||||||||||||||
+- - - - - - - - - - - - - - - - - -*/
+/* hidden elements
+exmpl responsive matrix for "display:none" ("dn"): 
+@media (min,max,all) {
+- - - - - | - - - - - - - -|- - - - - - - -
+0 < 639px | 640px < 1023px | 1024px < wrap
+- - - - - | - - - - - - - -|- - - - - - - -
+                 dn
+              all media
+- - - - - | - - - - - - - -|- - - - - - - -
+      -dn |      d-n       | dn-
+only small|  only medium   | only large 
+- - - - - | - - - - - - - -|- - - - - - - -
+                      -d-n |
+     only small and medium |
+- - - - - | - - - - - - - -|- - - - - - - -
+          | d-n-
+          | only medium and large
+- - - - - | - - - - - - - - - - - - - - - -
+};
+*/

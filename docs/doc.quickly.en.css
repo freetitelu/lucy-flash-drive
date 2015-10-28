@@ -1,0 +1,36 @@
+/*CSS-library:"Lucy Flash Drive" v. 0.5.1
+- - - - - - - - - - - - - - - - - -
+
+||||||||||||||||||||||||||||||
+|| ||||| ||| |||    || ||| ||Flash
+|| ||||| ||| ||| |||||| | |||||| |
+|| ||||| ||| ||| ||||||| ||||||| |
+||    |||   ||||    |||| ||||Drive
+||||||||||||||||||||||||||||||
+- - - - - - - - - - - - - - - - - -
+
+MATRIX-tutorial(only example):
+exmpl responsive for "display:none" ("dn"):
+@media (min,max,all) {
+- - - - - -| - - - - - - - -|- - - - - - - -
+0 < 639px  | 640px < 1023px | 1024px < wrap
+- - - - - -| - - - - - - - -|- - - - - - - -
+              class="dn"
+              all media
+- - - - - -| - - - - - - - -|- - - - - - - -
+class="-dn"|  class="d-n    | class="dn-
+only small |  only medium   | only large 
+- - - - - -| - - - - - - - -|- - - - - - - -
+             class="-d-n"   |
+      only small and medium |
+- - - - - -| - - - - - - - -|- - - - - - - -
+          -| class="d-n-"
+          -| only medium and large
+- - - - - -| - - - - - - - - - - - - - - - -
+};
+
+BOOTSTRAP-tutorial (for grids):
+
+class="col-sm-4 col-md-6 col-lg-8" => class="cell -w4 w-6 w8-"
+
+*/

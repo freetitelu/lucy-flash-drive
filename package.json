@@ -1,0 +1,40 @@
+{
+  "name": "lucy-flash-drive",
+  "version": "0.6.0",
+  "description": "It's flash drive made Lucy",
+  "style": "dist/lucy-flash-drive.min.css",
+  "main": "dist/lucy-flash-drive.min.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-remove-empty-lines": "^0.0.2",
+    "gulp-rename": "^1.2.2",
+    "run-sequence": "^1.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lucyway/lucy-flash-drive.git"
+  },
+  "keywords": [
+    "browser",
+    "css",
+    "helpers",
+    "grid",
+    "flexbox"
+  ],
+  "author": "freetitelu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lucyway/lucy-flash-drive/issues"
+  },
+  "homepage": "https://github.com/Lucyway/lucy-flash-drive"
+}
