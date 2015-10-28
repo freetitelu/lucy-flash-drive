@@ -7,55 +7,55 @@
 .cell{padding-left:10px;padding-right:10px}
 
 .w-0o5{-webkit-flex-basis:4.1667%;-ms-flex-preferred-size:4.1667%;flex-basis:4.1667%;max-width:4.1667%}
-.w-1  {-webkit-flex-basis:8.33333%;-ms-flex-preferred-size:8.33333%;flex-basis:8.33333%;max-width:8.33333%}
+.w-1  {-webkit-flex-basis:8.3333%;-ms-flex-preferred-size:8.3333%;flex-basis:8.3333%;max-width:8.3333%}
 .w-1o5{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
-.w-2  {-webkit-flex-basis:16.66667%;-ms-flex-preferred-size:16.66667%;flex-basis:16.66667%;max-width:16.66667%}
+.w-2  {-webkit-flex-basis:16.6667%;-ms-flex-preferred-size:16.6667%;flex-basis:16.6667%;max-width:16.6667%}
 .w-2o5{-webkit-flex-basis:20.8333%;-ms-flex-preferred-size:20.8333%;flex-basis:20.8333%;max-width:20.8333%}
 .w-3  {-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}
 .w-3o5{-webkit-flex-basis:29.1667%;-ms-flex-preferred-size:29.1667%;flex-basis:29.1667%;max-width:29.1667%}
-.w-4  {-webkit-flex-basis:33.33333%;-ms-flex-preferred-size:33.33333%;flex-basis:33.33333%;max-width:33.33333%}
+.w-4  {-webkit-flex-basis:33.3333%;-ms-flex-preferred-size:33.3333%;flex-basis:33.3333%;max-width:33.3333%}
 .w-4o5{-webkit-flex-basis:37.5%;-ms-flex-preferred-size:37.5%;flex-basis:37.5%;max-width:37.5%}
-.w-5  {-webkit-flex-basis:41.66667%;-ms-flex-preferred-size:41.66667%;flex-basis:41.66667%;max-width:41.66667%}
+.w-5  {-webkit-flex-basis:41.6667%;-ms-flex-preferred-size:41.6667%;flex-basis:41.6667%;max-width:41.6667%}
 .w-5o5{-webkit-flex-basis:45.8333%;-ms-flex-preferred-size:45.8333%;flex-basis:45.8333%;max-width:45.8333%}
 .w-6  {-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
 .w-6o5{-webkit-flex-basis:54.1667%;-ms-flex-preferred-size:54.1667%;flex-basis:54.1667%;max-width:54.1667%}
-.w-7  {-webkit-flex-basis:58.33333%;-ms-flex-preferred-size:58.33333%;flex-basis:58.33333%;max-width:58.33333%}
+.w-7  {-webkit-flex-basis:58.3333%;-ms-flex-preferred-size:58.3333%;flex-basis:58.3333%;max-width:58.3333%}
 .w-7o5{-webkit-flex-basis:62.5%;-ms-flex-preferred-size:62.5%;flex-basis:62.5%;max-width:62.5%}
-.w-8  {-webkit-flex-basis:66.66667%;-ms-flex-preferred-size:66.66667%;flex-basis:66.66667%;max-width:66.66667%}
+.w-8  {-webkit-flex-basis:66.6667%;-ms-flex-preferred-size:66.6667%;flex-basis:66.6667%;max-width:66.6667%}
 .w-8o5{-webkit-flex-basis:70.8333%;-ms-flex-preferred-size:70.8333%;flex-basis:70.8333%;max-width:70.8333%}
 .w-9  {-webkit-flex-basis:75%;-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}
 .w-9o5{-webkit-flex-basis:79.1667%;-ms-flex-preferred-size:79.1667%;flex-basis:79.1667%;max-width:79.1667%}
-.w-10 {-webkit-flex-basis:83.33333%;-ms-flex-preferred-size:83.33333%;flex-basis:83.33333%;max-width:83.33333%}
+.w-10 {-webkit-flex-basis:83.3333%;-ms-flex-preferred-size:83.3333%;flex-basis:83.3333%;max-width:83.3333%}
 .w-10o5{-webkit-flex-basis:87.5%;-ms-flex-preferred-size:87.5%;flex-basis:87.5%;max-width:87.5%}
-.w-11  {-webkit-flex-basis:91.66667%;-ms-flex-preferred-size:91.66667%;flex-basis:91.66667%;max-width:91.66667%}
+.w-11  {-webkit-flex-basis:91.6667%;-ms-flex-preferred-size:91.6667%;flex-basis:91.6667%;max-width:91.6667%}
 .w-11o5{-webkit-flex-basis:95.8333%;-ms-flex-preferred-size:95.8333%;flex-basis:95.8333%;max-width:95.8333%}
 .w-12  {-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 
 ul.grid>li{padding:10px}
 .li-1>li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 .li-2>li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
-.li-3>li{-webkit-flex-basis:33.33333%;-ms-flex-preferred-size:33.33333%;flex-basis:33.33333%;max-width:33.33333%}
+.li-3>li{-webkit-flex-basis:33.3333%;-ms-flex-preferred-size:33.3333%;flex-basis:33.3333%;max-width:33.3333%}
 .li-4>li{-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}
 .li-5>li{-webkit-flex-basis:20%;-ms-flex-preferred-size:20%;flex-basis:20%;max-width:20%}
-.li-6>li{-webkit-flex-basis:16.66667%;-ms-flex-preferred-size:16.66667%;flex-basis:16.66667%;max-width:16.66667%}
-.li-7>li{-webkit-flex-basis:14.28571%;-ms-flex-preferred-size:14.28571%;flex-basis:14.28571%;max-width:14.28571%}
+.li-6>li{-webkit-flex-basis:16.6667%;-ms-flex-preferred-size:16.6667%;flex-basis:16.6667%;max-width:16.6667%}
+.li-7>li{-webkit-flex-basis:14.2857%;-ms-flex-preferred-size:14.2857%;flex-basis:14.2857%;max-width:14.2857%}
 .li-8>li{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
-.li-9>li{-webkit-flex-basis:11.11111%;-ms-flex-preferred-size:11.11111%;flex-basis:11.11111%;max-width:11.11111%}
+.li-9>li{-webkit-flex-basis:11.1111%;-ms-flex-preferred-size:11.1111%;flex-basis:11.1111%;max-width:11.1111%}
 .li-10>li{-webkit-flex-basis:10%;-ms-flex-preferred-size:10%;flex-basis:10%;max-width:10%}
-.li-11>li{-webkit-flex-basis:9.09091%;-ms-flex-preferred-size:9.09091%;flex-basis:9.09091%;max-width:9.09091%}
-.li-12>li{-webkit-flex-basis:8.33333%;-ms-flex-preferred-size:8.33333%;flex-basis:8.33333%;max-width:8.33333%}
+.li-11>li{-webkit-flex-basis:9.0909%;-ms-flex-preferred-size:9.0909%;flex-basis:9.0909%;max-width:9.0909%}
+.li-12>li{-webkit-flex-basis:8.3333%;-ms-flex-preferred-size:8.3333%;flex-basis:8.3333%;max-width:8.3333%}
 
-.ml-1{margin-left:8.33333%}
-.ml-2{margin-left:16.66667%}
+.ml-1{margin-left:8.3333%}
+.ml-2{margin-left:16.6667%}
 .ml-3{margin-left:25%}
-.ml-4{margin-left:33.33333%}
-.ml-5{margin-left:41.66667%}
+.ml-4{margin-left:33.3333%}
+.ml-5{margin-left:41.6667%}
 .ml-6{margin-left:50%}
-.ml-7{margin-left:58.33333%}
-.ml-8{margin-left:66.66667%}
+.ml-7{margin-left:58.3333%}
+.ml-8{margin-left:66.6667%}
 .ml-9{margin-left:75%}
-.ml-10{margin-left:83.33333%}
-.ml-11{margin-left:91.66667%}
+.ml-10{margin-left:83.3333%}
+.ml-11{margin-left:91.6667%}
 
 .x-0{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}
 .x-50{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center}
