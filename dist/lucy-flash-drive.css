@@ -320,8 +320,8 @@ Widths - responsive/fixed flex-grid utilities, exmpl:
 .grid{margin:0 -5px}
 .cell{padding-left:5px;padding-right:5px;overflow:hidden}
 
-.grid.auto>.cell{-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1}
-.grid.tight>.cell {padding-left:0px;padding-right:0px}
+.grid.autocell>.cell {-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.nopaddingcell>.cell {padding-left:0px;padding-right:0px}
 
 .w0o5{-webkit-flex-basis:4.1667%;-ms-flex-preferred-size:4.1667%;flex-basis:4.1667%;max-width:4.1667%}
 .w1  {-webkit-flex-basis:8.3333%;-ms-flex-preferred-size:8.3333%;flex-basis:8.3333%;max-width:8.3333%}
@@ -353,8 +353,9 @@ widths for list-cells, exmpl: <ul class="grid li4"><li>
 ul.grid {padding-left:0}
 .grid>li{padding: 5px;list-style:none}
 
-.grid.auto>li{-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1}
-.grid.tight>li {padding:0}
+.grid.autoli>li{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.nopadding-li>li {padding:0}
+
 .li1>li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 .li2>li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
 .li3>li{-webkit-flex-basis:33.3333%;-ms-flex-preferred-size:33.3333%;flex-basis:33.3333%;max-width:33.3333%}
@@ -399,6 +400,9 @@ flex alignment along the x/y axis: start(0%), center(50%), end(100%)
 .grid{margin:0 -5px}
 .cell{padding-left:5px;padding-right:5px}
 
+.grid.-autocell>.cell {-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.-nopaddingcell>.cell {padding-left:0px;padding-right:0px}
+
 .-w0o5{-webkit-flex-basis:4.1667%;-ms-flex-preferred-size:4.1667%;flex-basis:4.1667%;max-width:4.1667%}
 .-w1  {-webkit-flex-basis:8.3333%;-ms-flex-preferred-size:8.3333%;flex-basis:8.3333%;max-width:8.3333%}
 .-w1o5{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
@@ -425,6 +429,10 @@ flex alignment along the x/y axis: start(0%), center(50%), end(100%)
 .-w12  {-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 
 ul.grid>li{padding: 5px}
+
+.grid.-autoli>li{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.-nopaddingli>li {padding:0}
+
 .-li1>li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 .-li2>li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
 .-li3>li{-webkit-flex-basis:33.3333%;-ms-flex-preferred-size:33.3333%;flex-basis:33.3333%;max-width:33.3333%}
@@ -462,6 +470,9 @@ ul.grid>li{padding: 5px}
 .o-00-{-ms-flex-order:-1;-webkit-order:-1;order:-1}
 .o-99-{-ms-flex-order:99;-webkit-order:99;order:99}
 
+.grid.auto-cell->.cell {-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.nopadding-cell->.cell {padding-left:0px;padding-right:0px}
+
 .w-0o5-{-webkit-flex-basis:4.1667%;-ms-flex-preferred-size:4.1667%;flex-basis:4.1667%;max-width:4.1667%}
 .w-1-  {-webkit-flex-basis:8.3333%;-ms-flex-preferred-size:8.3333%;flex-basis:8.3333%;max-width:8.3333%}
 .w-1o5-{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
@@ -486,6 +497,9 @@ ul.grid>li{padding: 5px}
 .w-11-  {-webkit-flex-basis:91.6667%;-ms-flex-preferred-size:91.6667%;flex-basis:91.6667%;max-width:91.6667%}
 .w-11o5-{-webkit-flex-basis:95.8333%;-ms-flex-preferred-size:95.8333%;flex-basis:95.8333%;max-width:95.8333%}
 .w-12-  {-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+
+.grid.auto-li->li{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.nopadding-li->li {padding:0}
 
 .li-1->li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 .li-2->li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
@@ -525,8 +539,11 @@ ul.grid>li{padding: 5px}
 .o-99{-ms-flex-order:99;-webkit-order:99;order:99}
 
 .wrap{padding-left:20px;padding-right:20px}
-.grid {margin:0 -10px}
+.grid{margin:0 -10px}
 .cell{padding-left:10px;padding-right:10px}
+
+.grid.auto-cell>.cell {-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.nopadding-cell>.cell {padding-left:0px;padding-right:0px}
 
 .w-0o5{-webkit-flex-basis:4.1667%;-ms-flex-preferred-size:4.1667%;flex-basis:4.1667%;max-width:4.1667%}
 .w-1  {-webkit-flex-basis:8.3333%;-ms-flex-preferred-size:8.3333%;flex-basis:8.3333%;max-width:8.3333%}
@@ -554,6 +571,10 @@ ul.grid>li{padding: 5px}
 .w-12  {-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 
 ul.grid>li{padding:10px}
+
+.grid.auto-li>li{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.nopadding-li>li {padding:0}
+
 .li-1>li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 .li-2>li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
 .li-3>li{-webkit-flex-basis:33.3333%;-ms-flex-preferred-size:33.3333%;flex-basis:33.3333%;max-width:33.3333%}
@@ -591,6 +612,9 @@ ul.grid>li{padding:10px}
 .-o-00{-ms-flex-order:-1;-webkit-order:-1;order:-1}
 .-o-99{-ms-flex-order:99;-webkit-order:99;order:99}
 
+.grid.-auto-cell>.cell {-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.-nopadding-cell>.cell {padding-left:0px;padding-right:0px}
+
 .-w-0o5{-webkit-flex-basis:4.1667%;-ms-flex-preferred-size:4.1667%;flex-basis:4.1667%;max-width:4.1667%}
 .-w-1  {-webkit-flex-basis:8.3333%;-ms-flex-preferred-size:8.3333%;flex-basis:8.3333%;max-width:8.3333%}
 .-w-1o5{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
@@ -616,7 +640,9 @@ ul.grid>li{padding:10px}
 .-w-11o5{-webkit-flex-basis:95.8333%;-ms-flex-preferred-size:95.8333%;flex-basis:95.8333%;max-width:95.8333%}
 .-w-12  {-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 
-ul.grid>li{padding:5px}
+.grid.-auto-li>li{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.-nopadding-li>li {padding:0}
+
 .-li-1>li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 .-li-2>li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
 .-li-3>li{-webkit-flex-basis:33.3333%;-ms-flex-preferred-size:33.3333%;flex-basis:33.3333%;max-width:33.3333%}
@@ -658,6 +684,9 @@ ul.grid>li{padding:5px}
 .grid{margin:0 -15px}
 .cell{padding-left:15px;padding-right:15px}
 
+.grid.autocell->.cell {-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.nopaddingcell->.cell {padding-left:0px;padding-right:0px}
+
 .w0o5-{-webkit-flex-basis:4.1667%;-ms-flex-preferred-size:4.1667%;flex-basis:4.1667%;max-width:4.1667%}
 .w1-  {-webkit-flex-basis:8.3333%;-ms-flex-preferred-size:8.3333%;flex-basis:8.3333%;max-width:8.3333%}
 .w1o5-{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
@@ -683,7 +712,11 @@ ul.grid>li{padding:5px}
 .w11o5-{-webkit-flex-basis:95.8333%;-ms-flex-preferred-size:95.8333%;flex-basis:95.8333%;max-width:95.8333%}
 .w12-  {-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 
-ul.grid>li{padding: 15px}
+ul.grid>li{padding:15px}
+
+.grid.autoli->li{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.nopaddingli->li {padding:0}
+
 .li1->li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 .li2->li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
 .li3->li{-webkit-flex-basis:33.3333%;-ms-flex-preferred-size:33.3333%;flex-basis:33.3333%;max-width:33.3333%}

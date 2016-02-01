@@ -6,6 +6,9 @@
 .grid{margin:0 -15px}
 .cell{padding-left:15px;padding-right:15px}
 
+.grid.autocell->.cell {-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.nopaddingcell->.cell {padding-left:0px;padding-right:0px}
+
 .w0o5-{-webkit-flex-basis:4.1667%;-ms-flex-preferred-size:4.1667%;flex-basis:4.1667%;max-width:4.1667%}
 .w1-  {-webkit-flex-basis:8.3333%;-ms-flex-preferred-size:8.3333%;flex-basis:8.3333%;max-width:8.3333%}
 .w1o5-{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
@@ -31,7 +34,11 @@
 .w11o5-{-webkit-flex-basis:95.8333%;-ms-flex-preferred-size:95.8333%;flex-basis:95.8333%;max-width:95.8333%}
 .w12-  {-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 
-ul.grid>li{padding: 15px}
+ul.grid>li{padding:15px}
+
+.grid.autoli->li{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
+.grid.nopaddingli->li {padding:0}
+
 .li1->li{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 .li2->li{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
 .li3->li{-webkit-flex-basis:33.3333%;-ms-flex-preferred-size:33.3333%;flex-basis:33.3333%;max-width:33.3333%}

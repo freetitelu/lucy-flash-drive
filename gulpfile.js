@@ -39,7 +39,7 @@ gulp.task("default", [
 
 gulp.task('helper', function() {
   return gulp.src([
-    './src/lucy.helper/lucy.helper.0-.css',
+    './src/lucy.helper/lucy.helper.css',
     './src/lucy.helper/lucy.helper.-639.css',
     './src/lucy.helper/lucy.helper.640-.css',
     './src/lucy.helper/lucy.helper.640-1023.css',
@@ -52,7 +52,7 @@ gulp.task('helper', function() {
 
 gulp.task('grid', function() {
   return gulp.src([
-    './src/lucy.grid/lucy.grid.0-.css',
+    './src/lucy.grid/lucy.grid.css',
     './src/lucy.grid/lucy.grid.-639.css',
     './src/lucy.grid/lucy.grid.640-.css',
     './src/lucy.grid/lucy.grid.640-1023.css',
@@ -77,7 +77,7 @@ gulp.task('flashDrive', function() {
 
 gulp.task('helperMin0', function() {
   return gulp.src([
-    './src/lucy.helper/lucy.helper.0-.css',
+    './src/lucy.helper/lucy.helper.css',
     ])
     .pipe(concat('lucy.helper.min.css'))
     .pipe(gulp.dest('./dist/'));
@@ -109,7 +109,7 @@ gulp.task('helperMin2', function() {
 gulp.task('gridMin0', function() {
   return gulp.src([
     //'./src/docs/doc.inline.css',
-    './src/lucy.grid/lucy.grid.0-.css',
+    './src/lucy.grid/lucy.grid.css',
     ])
     .pipe(concat('lucy.grid.min.css'))
     .pipe(gulp.dest('./dist/'));
