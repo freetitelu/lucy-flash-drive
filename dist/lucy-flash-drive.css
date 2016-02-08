@@ -42,6 +42,8 @@ text - responsive utilities
 .fwb{font-weight:700!important}
 .cfff{color:#fff!important}
 .c000{color:#000!important}
+.bcfff{background-color:#fff!important}
+.bc000{background-color:#000!important}
 /*
 other responsive utilities
 */
@@ -93,6 +95,8 @@ other responsive utilities
 .-fwb{font-weight:700!important}
 .-cfff{color:#fff!important}
 .-c000{color:#000!important}
+.-bcfff{background-color:#fff!important}
+.-bc000{background-color:#000!important}
 
 .-db{display:block!important}
 .-dib{display:inline-block!important}
@@ -141,6 +145,8 @@ other responsive utilities
 .fw-b-{font-weight:700!important}
 .c-fff-{color:#fff!important}
 .c-000-{color:#000!important}
+.bc-fff-{background-color:#fff!important}
+.bc-000-{background-color:#000!important}
 
 .d-b-{display:block!important}
 .d-ib-{display:inline-block!important}
@@ -188,6 +194,8 @@ other responsive utilities
 .fw-b{font-weight:700!important}
 .c-fff{color:#fff!important}
 .c-000{color:#000!important}
+.bc-fff{background-color:#fff!important}
+.bc-000{background-color:#000!important}
 
 .d-b{display:block!important}
 .d-ib{display:inline-block!important}
@@ -237,6 +245,8 @@ other responsive utilities
 .-fw-b{font-weight:700!important}
 .-c-fff{color:#fff!important}
 .-c-000{color:#000!important}
+.-bc-fff{background-color:#fff!important}
+.-bc-000{background-color:#000!important}
 
 .-d-b{display:block!important}
 .-d-ib{display:inline-block!important}
@@ -285,6 +295,8 @@ other responsive utilities
 .fwb-{font-weight:700!important}
 .cfff-{color:#fff!important}
 .c000-{color:#000!important}
+.bcfff-{background-color:#fff!important}
+.bc000-{background-color:#000!important}
 
 .db-{display:block!important}
 .dib-{display:inline-block!important}
