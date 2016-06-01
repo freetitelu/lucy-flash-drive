@@ -4,12 +4,29 @@
 flexbox (.df,.grid - flexbox containers; .f,.cell - flexbox inner cells)
 */
 .df,.grid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
-.f,.cell{-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+.fx,.cell{-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
+
+.grid.no-spacing {padding:0}
+.grid.no-spacing > .cell {margin:0}
+
+
 /*
-first and last orders; opt.: 1)".grid>.cell.o00"; 2)".df>.f.o00"
+flex orders;
 */
-.o00{-ms-flex-order:-1;-webkit-order:-1;order:-1}
-.o99{-ms-flex-order:99;-webkit-order:99;order:99}
+.ord0{-ms-flex-order:-1;-webkit-order:-1;order:-1}
+.ord1 {-webkit-order:1;-ms-flex-order:1;order:1}
+.ord2 {-webkit-order:2;-ms-flex-order:2;order:2}
+.ord3 {-webkit-order:3;-ms-flex-order:3;order:3}
+.ord4 {-webkit-order:4;-ms-flex-order:4;order:4}
+.ord5 {-webkit-order:5;-ms-flex-order:5;order:5}
+.ord6 {-webkit-order:6;-ms-flex-order:6;order:6}
+.ord7 {-webkit-order:7;-ms-flex-order:7;order:7}
+.ord8 {-webkit-order:8;-ms-flex-order:8;order:8}
+.ord9 {-webkit-order:9;-ms-flex-order:9;order:9}
+.ord10 {-webkit-order:10;-ms-flex-order:10;order:10}
+.ord11 {-webkit-order:11;-ms-flex-order:11;order:11}
+.ord12 {-webkit-order:12;-ms-flex-order:12;order:12}
+.ord99{-ms-flex-order:99;-webkit-order:99;order:99}
 /*
 Widths - responsive/fixed flex-grid utilities, exmpl:
 <wrap>
@@ -23,35 +40,35 @@ Widths - responsive/fixed flex-grid utilities, exmpl:
 .grid.cellnopadding>.cell {padding-left:0px;padding-right:0px}
 
 .grid.cellauto>.cell {-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
-.w0h{-webkit-flex-basis:4.1667%;-ms-flex-preferred-size:4.1667%;flex-basis:4.1667%;max-width:4.1667%}
+.w0d5{-webkit-flex-basis:4.1667%;-ms-flex-preferred-size:4.1667%;flex-basis:4.1667%;max-width:4.1667%}
 .w1  {-webkit-flex-basis:8.3333%;-ms-flex-preferred-size:8.3333%;flex-basis:8.3333%;max-width:8.3333%}
-.w1h{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
+.w1d5{-webkit-flex-basis:12.5%;-ms-flex-preferred-size:12.5%;flex-basis:12.5%;max-width:12.5%}
 .w2  {-webkit-flex-basis:16.6667%;-ms-flex-preferred-size:16.6667%;flex-basis:16.6667%;max-width:16.6667%}
-.w2h{-webkit-flex-basis:20.8333%;-ms-flex-preferred-size:20.8333%;flex-basis:20.8333%;max-width:20.8333%}
+.w2d5{-webkit-flex-basis:20.8333%;-ms-flex-preferred-size:20.8333%;flex-basis:20.8333%;max-width:20.8333%}
 .w3  {-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}
-.w3h{-webkit-flex-basis:29.1667%;-ms-flex-preferred-size:29.1667%;flex-basis:29.1667%;max-width:29.1667%}
+.w3d5{-webkit-flex-basis:29.1667%;-ms-flex-preferred-size:29.1667%;flex-basis:29.1667%;max-width:29.1667%}
 .w4  {-webkit-flex-basis:33.3333%;-ms-flex-preferred-size:33.3333%;flex-basis:33.3333%;max-width:33.3333%}
-.w4h{-webkit-flex-basis:37.5%;-ms-flex-preferred-size:37.5%;flex-basis:37.5%;max-width:37.5%}
+.w4d5{-webkit-flex-basis:37.5%;-ms-flex-preferred-size:37.5%;flex-basis:37.5%;max-width:37.5%}
 .w5  {-webkit-flex-basis:41.6667%;-ms-flex-preferred-size:41.6667%;flex-basis:41.6667%;max-width:41.6667%}
-.w5h{-webkit-flex-basis:45.8333%;-ms-flex-preferred-size:45.8333%;flex-basis:45.8333%;max-width:45.8333%}
+.w5d5{-webkit-flex-basis:45.8333%;-ms-flex-preferred-size:45.8333%;flex-basis:45.8333%;max-width:45.8333%}
 .w6  {-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}
-.w6h{-webkit-flex-basis:54.1667%;-ms-flex-preferred-size:54.1667%;flex-basis:54.1667%;max-width:54.1667%}
+.w6d5{-webkit-flex-basis:54.1667%;-ms-flex-preferred-size:54.1667%;flex-basis:54.1667%;max-width:54.1667%}
 .w7  {-webkit-flex-basis:58.3333%;-ms-flex-preferred-size:58.3333%;flex-basis:58.3333%;max-width:58.3333%}
-.w7h{-webkit-flex-basis:62.5%;-ms-flex-preferred-size:62.5%;flex-basis:62.5%;max-width:62.5%}
+.w7d5{-webkit-flex-basis:62.5%;-ms-flex-preferred-size:62.5%;flex-basis:62.5%;max-width:62.5%}
 .w8  {-webkit-flex-basis:66.6667%;-ms-flex-preferred-size:66.6667%;flex-basis:66.6667%;max-width:66.6667%}
-.w8h{-webkit-flex-basis:70.8333%;-ms-flex-preferred-size:70.8333%;flex-basis:70.8333%;max-width:70.8333%}
+.w8d5{-webkit-flex-basis:70.8333%;-ms-flex-preferred-size:70.8333%;flex-basis:70.8333%;max-width:70.8333%}
 .w9  {-webkit-flex-basis:75%;-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}
-.w9h{-webkit-flex-basis:79.1667%;-ms-flex-preferred-size:79.1667%;flex-basis:79.1667%;max-width:79.1667%}
+.w9d5{-webkit-flex-basis:79.1667%;-ms-flex-preferred-size:79.1667%;flex-basis:79.1667%;max-width:79.1667%}
 .w10 {-webkit-flex-basis:83.3333%;-ms-flex-preferred-size:83.3333%;flex-basis:83.3333%;max-width:83.3333%}
-.w10h{-webkit-flex-basis:87.5%;-ms-flex-preferred-size:87.5%;flex-basis:87.5%;max-width:87.5%}
+.w10d5{-webkit-flex-basis:87.5%;-ms-flex-preferred-size:87.5%;flex-basis:87.5%;max-width:87.5%}
 .w11  {-webkit-flex-basis:91.6667%;-ms-flex-preferred-size:91.6667%;flex-basis:91.6667%;max-width:91.6667%}
-.w11h{-webkit-flex-basis:95.8333%;-ms-flex-preferred-size:95.8333%;flex-basis:95.8333%;max-width:95.8333%}
+.w11d5{-webkit-flex-basis:95.8333%;-ms-flex-preferred-size:95.8333%;flex-basis:95.8333%;max-width:95.8333%}
 .w12  {-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}
 /*
-widths for list-cells, exmpl: <ul class="grid li4"><li>
+widths for list-cells, exmpl:<ul class="grid li4"><li>
 */
 ul.grid {padding-left:0}
-.grid>li{padding: 5px;list-style:none}
+.grid>li{padding:5px;list-style:none}
 .grid.linopadding>li {padding:0}
 
 .grid.liauto>li{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%;}
@@ -82,7 +99,7 @@ offsets of cells (<div class="cell w1 ml1">)
 .ml10{margin-left:83.3333%}
 .ml11{margin-left:91.6667%}
 /*
-flex alignment along the x/y axis: start(0%), center(50%), end(100%)
+flex alignment along the x/y axis:start(0%), center(50%), end(100%)
 */
 .x0{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}
 .x50{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center}
