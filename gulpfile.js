@@ -1,5 +1,6 @@
 /*
 npm install --save-dev gulp gulp-rename gulp-remove-empty-lines gulp-cssmin gulp-concat
+run-sequence del gulp-postcss postcss-custom-properties autoprefixer gulp-vars
 */
 
 var gulp             = require("gulp");
@@ -9,12 +10,9 @@ var cssmin           = require("gulp-cssmin");
 var concat           = require("gulp-concat");
 var runSequence      = require('run-sequence');
 var del              = require('del');
-//var fs               = require('fs');
 var postcss          = require('gulp-postcss');
 var customProperties = require("postcss-custom-properties")
 var autoprefixer     = require('autoprefixer');
-
-//var cssVariables   = require('gulp-css-variables');
 var vars             = require('gulp-vars');
 
 gulp.task("default", [
@@ -49,7 +47,7 @@ gulp.task('flashDrive', function() {
     './dist/lucy.helper.css',
     './dist/lucy.grid.css'
     ])
-    .pipe(concat('lucy-flash-drive.css'))
+    .pipe(concat('lucy.flashdrive.css'))
     .pipe(gulp.dest('./dist/'));
 });
 
@@ -90,6 +88,6 @@ gulp.task('flashDriveNonVar', function() {
     './dist/lucy.helper.css',
     './dist/lucy.grid.nonvar.css'
     ])
-    .pipe(concat('lucy-flash-drive.nonvar.css'))
+    .pipe(concat('lucy.flashdrive.nonvar.css'))
     .pipe(gulp.dest('./dist/'));
 });

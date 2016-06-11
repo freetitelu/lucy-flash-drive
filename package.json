@@ -1,6 +1,6 @@
 {
   "name": "lucy-flash-drive",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "It's flash drive made Lucy",
   "style": "dist/lucy-flash-drive.min.css",
   "main": "dist/lucy-flash-drive.min.css",
@@ -29,7 +29,9 @@
     "css",
     "helpers",
     "grid",
-    "flexbox"
+    "flexbox",
+    "css variables",
+    "css custom properties"
   ],
   "author": "freetitelu",
   "license": "MIT",
