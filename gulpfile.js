@@ -9,8 +9,20 @@ var cssmin           = require("gulp-cssmin");
 var concat           = require("gulp-concat");
 var runSequence      = require('run-sequence');
 var del              = require('del');
+//var fs               = require('fs');
+var postcss          = require('gulp-postcss');
+var customProperties = require("postcss-custom-properties")
+var autoprefixer     = require('autoprefixer');
 
+//var cssVariables   = require('gulp-css-variables');
+var vars             = require('gulp-vars');
 
+gulp.task("default", [
+    'build:flashDrive',//1
+    'build:flashDriveNonVar',//2
+]);
+
+//1
 gulp.task('build:flashDrive', function() {
   runSequence('helper',
               'grid',
@@ -18,48 +30,17 @@ gulp.task('build:flashDrive', function() {
               );
 });
 
-gulp.task('build:flashDriveMin', function() {
-  runSequence('helperMin0',
-              'helperMin1',
-              'helperMin2',
-              'gridMin0',
-              'gridMin1',
-              'gridMin2',
-              'flashDriveMin'
-              );
-});
-
-gulp.task("default", [
-    "build:flashDrive",
-    "build:flashDriveMin",
-]);
-
-
-
-
 gulp.task('helper', function() {
   return gulp.src([
-    './src/lucy.helper/lucy.helper.css',
-    './src/lucy.helper/lucy.helper.-639.css',
-    './src/lucy.helper/lucy.helper.640-.css',
-    './src/lucy.helper/lucy.helper.640-1023.css',
-    './src/lucy.helper/lucy.helper.-1023.css',
-    './src/lucy.helper/lucy.helper.1024-.css'
+    './src/lucy.helper.css',
     ])
-    .pipe(concat('lucy.helper.css'))
     .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('grid', function() {
   return gulp.src([
-    './src/lucy.grid/lucy.grid.css',
-    './src/lucy.grid/lucy.grid.-639.css',
-    './src/lucy.grid/lucy.grid.640-.css',
-    './src/lucy.grid/lucy.grid.640-1023.css',
-    './src/lucy.grid/lucy.grid.-1023.css',
-    './src/lucy.grid/lucy.grid.1024-.css'
+    './src/lucy.grid.css',
     ])
-    .pipe(concat('lucy.grid.css'))
     .pipe(gulp.dest('./dist/'));
 });
 
@@ -73,76 +54,42 @@ gulp.task('flashDrive', function() {
 });
 
 
-
-
-gulp.task('helperMin0', function() {
+//2
+gulp.task('build:flashDriveNonVar', function() {
+  runSequence(//'helperNonVar',
+              'gridNonVar',
+              'flashDriveNonVar'
+              );
+});
+/*
+gulp.task('helperNonVar', function() {
   return gulp.src([
-    './src/lucy.helper/lucy.helper.css',
+    './src/lucy.helper.css',
     ])
-    .pipe(concat('lucy.helper.min.css'))
+    .pipe(vars())
+    .pipe(postcss([ customProperties()  ]))
+    .pipe(postcss([ autoprefixer({ browsers: ['last 3 versions'] }) ]))
+    .pipe(concat('lucy.helper.nonvar.css'))
+    .pipe(gulp.dest('./dist/'));
+});
+*/
+gulp.task('gridNonVar', function() {
+  return gulp.src([
+    './src/lucy.grid.nonvar.css',
+    ])
+    .pipe(concat('lucy.grid.css'))
+    .pipe(vars())
+    .pipe(postcss([ customProperties()  ]))
+    .pipe(postcss([ autoprefixer({ browsers: ['last 3 versions'] }) ]))
+    .pipe(concat('lucy.grid.nonvar.css'))
     .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('helperMin1', function() {
+gulp.task('flashDriveNonVar', function() {
   return gulp.src([
-    './src/lucy.helper/lucy.helper.-639.css',
-    './src/lucy.helper/lucy.helper.640-.css',
-    './src/lucy.helper/lucy.helper.640-1023.css',
-    './src/lucy.helper/lucy.helper.-1023.css',
-    './src/lucy.helper/lucy.helper.1024-.css'
+    './dist/lucy.helper.css',
+    './dist/lucy.grid.nonvar.css'
     ])
-    .pipe(cssmin())
-    .pipe(concat('lucy-flash-drive.min.css'))
-    .pipe(gulp.dest('./dist/'));
-});
-
-gulp.task('helperMin2', function() {
-  return gulp.src([
-    './dist/lucy.helper.min.css',
-    './dist/lucy-flash-drive.min.css'
-    ])
-    .pipe(concat('lucy.helper.min.css'))
-    .pipe(gulp.dest('./dist/'));
-});
-
-
-gulp.task('gridMin0', function() {
-  return gulp.src([
-    //'./src/docs/doc.inline.css',
-    './src/lucy.grid/lucy.grid.css',
-    ])
-    .pipe(concat('lucy.grid.min.css'))
-    .pipe(gulp.dest('./dist/'));
-});
-
-gulp.task('gridMin1', function() {
-  return gulp.src([
-    './src/lucy.grid/lucy.grid.-639.css',
-    './src/lucy.grid/lucy.grid.640-.css',
-    './src/lucy.grid/lucy.grid.640-1023.css',
-    './src/lucy.grid/lucy.grid.-1023.css',
-    './src/lucy.grid/lucy.grid.1024-.css'
-    ])
-    .pipe(cssmin())
-    .pipe(concat('lucy-flash-drive.min.css'))
-    .pipe(gulp.dest('./dist/'));
-});
-
-gulp.task('gridMin2', function() {
-  return gulp.src([
-    './dist/lucy.grid.min.css',
-    './dist/lucy-flash-drive.min.css'
-    ])
-    .pipe(concat('lucy.grid.min.css'))
-    .pipe(gulp.dest('./dist/'));
-});
-
-
-gulp.task('flashDriveMin', function() {
-  return gulp.src([
-    './dist/lucy.helper.min.css',
-    './dist/lucy.grid.min.css'
-    ])
-    .pipe(concat('lucy-flash-drive.min.css'))
+    .pipe(concat('lucy-flash-drive.nonvar.css'))
     .pipe(gulp.dest('./dist/'));
 });

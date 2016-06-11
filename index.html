@@ -1,31 +1,47 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>lucy-flash-drive</title>
     <style>
-        .wrap{padding-left:10px;padding-right:10px;margin-left:auto;margin-right:auto;overflow:hidden}
         .wrap{max-width: 1200px;}
     </style>
 </head>
 <body>
-    <link rel="stylesheet" type="text/css" href="src/lucy.grid/lucy.grid.css">
+    <link rel="stylesheet" href="src/lucy.grid.css">
     <div class="wrap">
-        <div class="grid">
-            <div class="cell w3">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</div>
-            <div class="cell w3">2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2</div>
-            <div class="cell w3">3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</div>
-            <div class="cell w3">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</div>
+        <div class="grid _0">
+            <div class="cell w3 brd">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</div>
+            <div class="cell w3 brd">
+                <div class="grid">
+                    <div class="cell w3 brd">1 1</div>
+                    <div class="cell w3 brd">2 2</div>
+                    <div class="cell w3 brd">3 3 </div>
+                    <div class="cell w3 brd">4 4</div>
+                    <div class="cell w3 brd">1 1</div>
+                    <div class="cell w3 brd">2 2</div>
+                    <div class="cell w3 brd">3 3</div>
+                    <div class="cell w3 brd">4 4</div>
+                </div>
+            </div>
+            <div class="cell w3 brd">3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</div>
+            <div class="cell w3 brd">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</div>
+            <div class="cell w3 brd">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</div>
+            <div class="cell w3 brd">2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2</div>
+            <div class="cell w3 brd">3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</div>
+            <div class="cell w3 brd">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</div>
         </div>
+        <hr>
+        <ul class="grid li4">
+            <li>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</li>
+            <li>2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2</li>
+            <li>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</li>
+            <li>4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</li>
+            <li>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</li>
+            <li>2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2</li>
+            <li>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</li>
+            <li>4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</li>
+        </ul>
     </div>
-    <hr>
-    <link rel="stylesheet" type="text/css" href="src/lucy.grid/flexboxgrid.css">
-    <div class="wrap">
-        <div class="row">
-            <div class="col-xs-3">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</div>
-            <div class="col-xs-3">2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2</div>
-            <div class="col-xs-3">3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</div>
-            <div class="col-xs-3">4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</div>
-        </div>
-    </div>
+
+
 </body>
 </html>
