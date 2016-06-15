@@ -190,7 +190,6 @@ other
 --11: 91.6667%;
 --11h:95.8333%;
 --12: 100%;
-
 /*number cells of list*/
 --n5: 20%;
 --n7: 14.2857%;
@@ -212,11 +211,9 @@ Widths - responsive/fixed flex-grid utilities, exmpl:
         <cell w6>content (and inner grids)
 */
 .wrap{margin-left:auto;margin-right:auto;overflow:hidden}
-
 /*
 widths for list-cells, exmpl:<ul class="grid li4"><li>
 */
-
 ul.grid{padding-left:0}
 .grid>li{list-style:none}
 
