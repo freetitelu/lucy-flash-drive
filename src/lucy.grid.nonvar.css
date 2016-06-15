@@ -59,7 +59,7 @@ ul.grid{padding-left:0}
 @media(max-width: 639px){
 .wrap{padding-left:var(--s);padding-right:var(--s)}
 .grid{margin: calc(var(--s)/-2)}
-.cell,.grid>li{margin: calc(var(--s)/2);overflow:hidden}
+.cell,.grid>li{margin: calc(var(--s)/2)}
 
 ul.grid.-liauto>li,
 ul.grid.-li-auto->li,
@@ -145,7 +145,7 @@ flex alignment along the x/y axis:start(0%), center(50%), end(100%)
 @media (min-width: 640px) and (max-width: 1023px) {
 .wrap{padding-left:var(--m);padding-right:var(--m)}
 .grid{margin: calc(var(--m)/-2)}
-.cell,.grid>li{margin: calc(var(--m)/2);overflow:hidden}
+.cell,.grid>li{margin: calc(var(--m)/2)}
 
 ul.grid.li-auto->li,
 ul.grid.-li-auto>li,
@@ -222,7 +222,7 @@ ul.grid.liauto>li{flex-grow:1;flex-basis:0;width:calc(var(--12) - var(--m))}
 @media(min-width:1024px){
 .wrap{padding-left:var(--l);padding-right:var(--l)}
 .grid{margin: calc(var(--l)/-2)}
-.cell,.grid>li{margin:calc(var(--l)/2);overflow:hidden}
+.cell,.grid>li{margin:calc(var(--l)/2)}
 
 ul.grid.liauto->li,
 ul.grid.li-auto->li,
