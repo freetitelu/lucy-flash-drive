@@ -27,7 +27,7 @@ ul.grid{padding-left:0}
 @media(max-width: 639px){
 .wrap{padding-left:10px;padding-right:10px}
 .grid{margin: calc(10px/-2)}
-.cell,.grid>li{margin: calc(10px/2);overflow:hidden}
+.cell,.grid>li{margin: calc(10px/2)}
 
 ul.grid.-liauto>li,
 ul.grid.-li-auto->li,
@@ -113,7 +113,7 @@ flex alignment along the x/y axis:start(0%), center(50%), end(100%)
 @media (min-width: 640px) and (max-width: 1023px) {
 .wrap{padding-left:20px;padding-right:20px}
 .grid{margin: calc(20px/-2)}
-.cell,.grid>li{margin: calc(20px/2);overflow:hidden}
+.cell,.grid>li{margin: calc(20px/2)}
 
 ul.grid.li-auto->li,
 ul.grid.-li-auto>li,
@@ -190,7 +190,7 @@ ul.grid.liauto>li{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-fl
 @media(min-width:1024px){
 .wrap{padding-left:30px;padding-right:30px}
 .grid{margin: calc(30px/-2)}
-.cell,.grid>li{margin:calc(30px/2);overflow:hidden}
+.cell,.grid>li{margin:calc(30px/2)}
 
 ul.grid.liauto->li,
 ul.grid.li-auto->li,
