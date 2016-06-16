@@ -9,8 +9,8 @@
 /*
 flexbox (.df,.grid - flexbox containers; .f,.cell - flexbox inner cells)
 */
-.df,.grid{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-flex-flow: row wrap;-ms-flex-flow: row wrap;flex-flow: row wrap;box-sizing: border-box;max-width:100%}
-.fx,.cell,.grid>li{-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;box-sizing: border-box;max-width:100%}
+.df,.grid{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-flex-flow: row wrap;-ms-flex-flow: row wrap;flex-flow: row wrap;box-sizing: border-box}
+.fx,.cell,.grid>li{-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;box-sizing: border-box}
 /*
 Widths - responsive/fixed flex-grid utilities, exmpl:
 <wrap>
@@ -26,11 +26,11 @@ ul.grid{padding-left:0}
 @media(max-width: 639px){
 .wrap{padding-left:10px;padding-right:10px}
 .grid{margin: calc(10px/-2)}
-.cell,.grid>li{margin: calc(10px/2)}
+.cell,.grid>li{margin: calc(10px/2);width:calc(100% - 10px)}
 
 ul.grid.-liauto>li,
 ul.grid.-li-auto->li,
-ul.grid.liauto>li{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;width:calc(100% - 10px)}
+ul.grid.liauto>li{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0}
 
 /*
 widths for list-cells, exmpl:<ul class="grid li4"><li>
@@ -112,12 +112,12 @@ flex alignment along the x/y axis:start(0%), center(50%), end(100%)
 @media (min-width: 640px) and (max-width: 1023px) {
 .wrap{padding-left:20px;padding-right:20px}
 .grid{margin: calc(20px/-2)}
-.cell,.grid>li{margin: calc(20px/2)}
+.cell,.grid>li{margin: calc(20px/2);width:calc(100% - 20px)}
 
 ul.grid.li-auto->li,
 ul.grid.-li-auto>li,
 ul.grid.li-auto->li,
-ul.grid.liauto>li{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;width:calc(100% - 20px)}
+ul.grid.liauto>li{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0}
 
 .w-0h,.-w-0h,.w-0h-,.w0h{width:calc(4.1667% - 20px)}
 .w-1,.-w-1,.w-1-,.w1,.li-12>li,.-li-12>li,.li-12->li,.li12>li{width:calc(8.3333% - 20px)}
@@ -189,11 +189,11 @@ ul.grid.liauto>li{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-fl
 @media(min-width:1024px){
 .wrap{padding-left:30px;padding-right:30px}
 .grid{margin: calc(30px/-2)}
-.cell,.grid>li{margin:calc(30px/2)}
+.cell,.grid>li{margin:calc(30px/2);width:calc(100% - 30px)}
 
 ul.grid.liauto->li,
 ul.grid.li-auto->li,
-ul.grid.liauto>li{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;width:calc(100% - 30px)}
+ul.grid.liauto>li{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0}
 
 .w0h-,.w-0h-,.w0h{width:calc(4.1667% - 30px)}
 .w1-,.w-1-,.w1,.li12->li,.li-12->li,.li12>li{width:calc(8.3333% - 30px)}

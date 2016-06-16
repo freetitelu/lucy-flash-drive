@@ -41,8 +41,8 @@
 /*
 flexbox (.df,.grid - flexbox containers; .f,.cell - flexbox inner cells)
 */
-.df,.grid{display:flex;flex:1 1 auto;flex-flow: row wrap;box-sizing: border-box;max-width:var(--12)}
-.fx,.cell,.grid>li{flex:0 0 auto;box-sizing: border-box;max-width:var(--12)}
+.df,.grid{display:flex;flex:1 1 auto;flex-flow: row wrap;box-sizing: border-box}
+.fx,.cell,.grid>li{flex:0 0 auto;box-sizing: border-box}
 /*
 Widths - responsive/fixed flex-grid utilities, exmpl:
 <wrap>
@@ -58,11 +58,11 @@ ul.grid{padding-left:0}
 @media(max-width: 639px){
 .wrap{padding-left:var(--s);padding-right:var(--s)}
 .grid{margin: calc(var(--s)/-2)}
-.cell,.grid>li{margin: calc(var(--s)/2)}
+.cell,.grid>li{margin: calc(var(--s)/2);width:calc(var(--12) - var(--s))}
 
 ul.grid.-liauto>li,
 ul.grid.-li-auto->li,
-ul.grid.liauto>li{flex-grow:1;flex-basis:0;width:calc(var(--12) - var(--s))}
+ul.grid.liauto>li{flex-grow:1;flex-basis:0}
 
 /*
 widths for list-cells, exmpl:<ul class="grid li4"><li>
@@ -144,12 +144,12 @@ flex alignment along the x/y axis:start(0%), center(50%), end(100%)
 @media (min-width: 640px) and (max-width: 1023px) {
 .wrap{padding-left:var(--m);padding-right:var(--m)}
 .grid{margin: calc(var(--m)/-2)}
-.cell,.grid>li{margin: calc(var(--m)/2)}
+.cell,.grid>li{margin: calc(var(--m)/2);width:calc(var(--12) - var(--m))}
 
 ul.grid.li-auto->li,
 ul.grid.-li-auto>li,
 ul.grid.li-auto->li,
-ul.grid.liauto>li{flex-grow:1;flex-basis:0;width:calc(var(--12) - var(--m))}
+ul.grid.liauto>li{flex-grow:1;flex-basis:0}
 
 .w-0h,.-w-0h,.w-0h-,.w0h{width:calc(var(--0h) - var(--m))}
 .w-1,.-w-1,.w-1-,.w1,.li-12>li,.-li-12>li,.li-12->li,.li12>li{width:calc(var(--1) - var(--m))}
@@ -221,11 +221,11 @@ ul.grid.liauto>li{flex-grow:1;flex-basis:0;width:calc(var(--12) - var(--m))}
 @media(min-width:1024px){
 .wrap{padding-left:var(--l);padding-right:var(--l)}
 .grid{margin: calc(var(--l)/-2)}
-.cell,.grid>li{margin:calc(var(--l)/2)}
+.cell,.grid>li{margin:calc(var(--l)/2);width:calc(var(--12) - var(--l))}
 
 ul.grid.liauto->li,
 ul.grid.li-auto->li,
-ul.grid.liauto>li{flex-grow:1;flex-basis:0;width:calc(var(--12) - var(--l))}
+ul.grid.liauto>li{flex-grow:1;flex-basis:0}
 
 .w0h-,.w-0h-,.w0h{width:calc(var(--0h) - var(--l))}
 .w1-,.w-1-,.w1,.li12->li,.li-12->li,.li12>li{width:calc(var(--1) - var(--l))}
