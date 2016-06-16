@@ -9,8 +9,8 @@
 /*
 flexbox (.df,.grid - flexbox containers; .f,.cell - flexbox inner cells)
 */
-.df,.grid{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-flex-flow: row wrap;-ms-flex-flow: row wrap;flex-flow: row wrap;box-sizing: border-box;}
-.fx,.cell{-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;box-sizing: border-box;}
+.df,.grid{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-flex-flow: row wrap;-ms-flex-flow: row wrap;flex-flow: row wrap;box-sizing: border-box;max-width:100%}
+.fx,.cell,.grid>li{-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;box-sizing: border-box;max-width:100%}
 /*
 Widths - responsive/fixed flex-grid utilities, exmpl:
 <wrap>

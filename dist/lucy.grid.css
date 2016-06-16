@@ -42,8 +42,8 @@
 /*
 flexbox (.df,.grid - flexbox containers; .fx,.cell - flexbox inner cells)
 */
-.df,.grid{display:flex;flex:1 1 auto;flex-flow: row wrap;box-sizing:border-box}
-.fx,.cell{flex:0 0 auto;box-sizing:border-box}
+.df,.grid{display:flex;flex:1 1 auto;flex-flow: row wrap;box-sizing: border-box;max-width:var(--12)}
+.fx,.cell,.grid>li{flex:0 0 auto;box-sizing: border-box;max-width:var(--12)}
 /*
 Widths - responsive/fixed flex-grid utilities, exmpl:
 <wrap>
