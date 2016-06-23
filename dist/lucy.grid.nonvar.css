@@ -18,7 +18,7 @@ Widths - responsive/fixed flex-grid utilities, exmpl:
     <grid>
         <cell w6>content (and inner grids)
 */
-.wrap{margin-left:auto;margin-right:auto}
+.wrap{margin-left:auto;margin-right:auto;width:100%}
 
 ul.grid{padding-left:0}
 .grid>li{list-style:none}
