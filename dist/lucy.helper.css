@@ -65,6 +65,8 @@ other
 .-posf,.-pos-f,.posf{position:fixed!important}
 .-clb:after,.-cl-b:after,.clb:after{clear:both}
 .-clb:before,.-clb:after,.-cl-b:before,.-cl-b:after,.clb:before,.clb:after{content:" ";display:table}
+.-ovh,.-ov-h,.ovh{overflow:hidden!important}
+.-ovv,.-ov-v,.ovv{overflow:visible!important}
 }
 
 @media(min-width: 640px) and (max-width: 1023px){
@@ -123,6 +125,8 @@ other
 .pos-f,.-pos-f,.pos-f-,.posf{position:fixed!important}
 .cl-b:after,.-cl-b:after,.cl-b-:after,.clb:after{clear:both}
 .cl-b:before,.cl-b:after,.-cl-b:before,.-cl-b:after,.cl-b-:before,.cl-b-:after,.clb:before,.clb:after{content:" ";display:table}
+.ov-h,.-ov-h,.ov-h-,.ovh{overflow:hidden!important}
+.ov-v,.-ov-v,.ov-v-,.ovv{overflow:visible!important}
 }
 @media (min-width: 1024px){
 .dn-,.d-n-,.dn{display:none!important}
@@ -180,4 +184,6 @@ other
 .posf-,.pos-f-,.posf{position:fixed!important}
 .cb-:after,.cl-b-:after,.clb:after{clear:both}
 .cl-b-:before,.cl-b-:after,.cl-b-:before,.cl-b-:after,.clb:before,.clb:after{content:" ";display:table}
+.ovh-,.ov-h-,.ovh{overflow:hidden!important}
+.ovv-,.ov-v-,.ovv{overflow:visible!important}
 }
