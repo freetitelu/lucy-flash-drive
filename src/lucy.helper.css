@@ -67,6 +67,7 @@ other
 .-clb:before,.-clb:after,.-cl-b:before,.-cl-b:after,.clb:before,.clb:after{content:" ";display:table}
 .-ovh,.-ov-h,.ovh{overflow:hidden!important}
 .-ovv,.-ov-v,.ovv{overflow:visible!important}
+.-w100pc,.-w-100pc,.w100pc{width:100%!important}
 .-h100pc,.-h-100pc,.h100pc{height:100%!important}
 }
 
@@ -128,6 +129,7 @@ other
 .cl-b:before,.cl-b:after,.-cl-b:before,.-cl-b:after,.cl-b-:before,.cl-b-:after,.clb:before,.clb:after{content:" ";display:table}
 .ov-h,.-ov-h,.ov-h-,.ovh{overflow:hidden!important}
 .ov-v,.-ov-v,.ov-v-,.ovv{overflow:visible!important}
+.w-100pc,.-w-100pc,.w-100pc-,.w100pc{width:100%!important}
 .h-100pc,.-h-100pc,.h-100pc-,.h100pc{height:100%!important}
 }
 @media (min-width: 1024px){
@@ -188,5 +190,6 @@ other
 .cl-b-:before,.cl-b-:after,.cl-b-:before,.cl-b-:after,.clb:before,.clb:after{content:" ";display:table}
 .ovh-,.ov-h-,.ovh{overflow:hidden!important}
 .ovv-,.ov-v-,.ovv{overflow:visible!important}
+.w100pc-,.w-100pc-,.w100pc{width:100%!important}
 .h100pc-,.h-100pc-,.h100pc{height:100%!important}
 }
