@@ -1,4 +1,4 @@
-/*lucy-flash-drive v.0.7.6 GRIDS-non-var*/
+/*lucy-flash-drive v.0.7.7 GRIDS-non-var*/
 *,*:after,*:before{box-sizing:border-box}
 :root{
 /*gutter*/
@@ -63,9 +63,9 @@ ul.grid{padding-left:0}
 .grid{margin: calc(var(--hs)*-1)}
 .cell,.grid>li{margin:var(--hs);width:calc(var(--12) - var(--s))}
 
-ul.grid.-liauto>li,
-ul.grid.-li-auto->li,
-ul.grid.liauto>li{flex-grow:1;flex-basis:0}
+.grid.-liauto>li,
+.grid.-li-auto->li,
+.grid.liauto>li{flex-grow:1;flex-basis:0}
 
 /*
 widths for list-cells, exmpl:<ul class="grid li4"><li>
@@ -149,10 +149,10 @@ flex alignment along the x/y axis:start(0%), center(50%), end(100%)
 .grid{margin: calc(var(--hm)*-1)}
 .cell,.grid>li{margin:var(--hm);width:calc(var(--12) - var(--m))}
 
-ul.grid.li-auto->li,
-ul.grid.-li-auto>li,
-ul.grid.li-auto->li,
-ul.grid.liauto>li{flex-grow:1;flex-basis:0}
+.grid.li-auto->li,
+.grid.-li-auto>li,
+.grid.li-auto->li,
+.grid.liauto>li{flex-grow:1;flex-basis:0}
 
 .w-0h,.-w-0h,.w-0h-,.w0h{width:calc(var(--0h) - var(--m))}
 .w-1,.-w-1,.w-1-,.w1,.li-12>li,.-li-12>li,.li-12->li,.li12>li{width:calc(var(--1) - var(--m))}
@@ -226,9 +226,9 @@ ul.grid.liauto>li{flex-grow:1;flex-basis:0}
 .grid{margin: calc(var(--hl)*-1)}
 .cell,.grid>li{margin:var(--hl);width:calc(var(--12) - var(--l))}
 
-ul.grid.liauto->li,
-ul.grid.li-auto->li,
-ul.grid.liauto>li{flex-grow:1;flex-basis:0}
+.grid.liauto->li,
+.grid.li-auto->li,
+.grid.liauto>li{flex-grow:1;flex-basis:0}
 
 .w0h-,.w-0h-,.w0h{width:calc(var(--0h) - var(--l))}
 .w1-,.w-1-,.w1,.li12->li,.li-12->li,.li12>li{width:calc(var(--1) - var(--l))}
@@ -297,11 +297,10 @@ ul.grid.liauto>li{flex-grow:1;flex-basis:0}
 .y100-,.y-100-,.y100{align-items:flex-end}
 }
 
-
 /*_0 null gutters*/
 @media(max-width: 639px){
-.grid.-_0,.grid.-_0>.cell,.grid.-_0>li,.grid.-_-0,.grid.-_-0>.cell,.grid.-_-0>li,.grid._0,.grid._0>.cell,.grid._0>li{margin: 0}
-ul.grid.-liauto.-_0>li,ul.grid.-li-auto.-_-0>li,ul.grid.liauto._0>li,.grid._0>.cell,.grid._0>li{width:var(--12)}
+.grid.-_0,.grid.-_-0,.grid._0,.grid.-_0>.cell,.grid.-_-0>.cell,.grid._0>.cell,.grid.-_0>li,.grid.-_-0>li,.grid._0>li{margin: 0}
+.-_0>.cell,.-_-0>.cell,._0>.cell,.-_0>li,.grid.-_-0>li,.grid._0>li{width:var(--12)}
 .-_0>.-w0h,.-_0>.-w-0h,.-_0>.w0h,.-_-0>.-w0h,.-_-0>.-w-0h,.-_-0>.w0h,._0>.-w0h,._0>.-w-0h,._0>.w0h{width:var(--0h)}
 .-_0>.-w1,.-_0>.-w-1,._0>.-w1,.-_0.-li12>li,.-_0.-li-12>li,.-_0.li12>li,.-_-0>.-w1,.-_-0>.w-1,.-_-0>.w1,.-_-0.-li12>li,.-_-0.-li-12>li,.-_-0.li12>li,._0>.-w1,._0>.-w-1,._0>.w1,._0.-li12>li,._0.-li-12>li,._0.li12>li{width:var(--1)}
 .-_0>.-w1h,.-_0>.-w-1h,.-_0>.w1h,.-_0.-li8>li,.-_0.-li-8>li,.-_0.li8>li,.-_-0>.-w1h,.-_-0>.-w-1h,.-_-0>.w1h,.-_-0.-li8>li,.-_-0.-li-8>li,.-_-0.li8>li,._0>.-w1h,._0>.-w-1h,._0>.w1h,._0.-li8>li,._0.-li-8>li,._0.li8>li{width:var(--1h)}
@@ -356,8 +355,8 @@ ul.grid.-liauto.-_0>li,ul.grid.-li-auto.-_-0>li,ul.grid.liauto._0>li,.grid._0>.c
 .-_0>.-ml11h,.-_0>.-ml-11h,.-_0>.ml11h,.-_-0>.-ml11h,.-_-0>.-ml-11h,.-_-0>.ml11h,._0>.-ml11h,._0>.-ml-11h,._0>.ml11h{margin-left:var(--11h)}
 }
 @media(min-width: 640px) and (max-width: 1023px){
-.grid._-0,.grid._-0>.cell,.grid._-0>li,.grid.-_-0,.grid.-_-0>.cell,.grid.-_-0>li,.grid._-0-,.grid._-0->.cell,.grid._-0->li,.grid._0,.grid._0>.cell,.grid._0>li{margin: 0}
-ul.grid.li-auto._-0>li,ul.grid.-li-auto.-_-0>li,ul.grid.li-auto-._-0->li,ul.grid.liauto._0>li,.grid._0>.cell,.grid._0>li{width:var(--12)}
+.grid._-0,.grid.-_-0,.grid._-0-,.grid._0,.grid._-0>.cell,.grid.-_-0>.cell,.grid._-0->.cell,.grid._0>.cell,.grid._-0>li,.grid.-_-0>li,.grid._-0->li,.grid._0>li{margin: 0}
+._-0>.cell,.-_-0>.cell,._-0->.cell,._0>.cell,.grid._-0>li,.grid.-_-0>li,.grid._-0->li,.grid._0>li{width:var(--12)}
 ._-0>.w-0h,._-0>.-w-0h,._-0>.w-0h-,._-0>.w0h,.-_-0>.w-0h,.-_-0>.-w-0h,.-_-0>.w-0h-,.-_-0>.w0h,._-0->.w-0h,._-0->.-w-0h,._-0->.w-0h-,._-0->.w0h,._0>.w-0h,._0>.-w-0h,._0>.w-0h-,._0>.w0h{width:var(--0h)}
 ._-0>.w-1,._-0>.-w-1,._-0>.w-1-,._-0>.w1,._-0.li-12>li,._-0.-li-12>li,._-0.li-12->li,._-0.li12>li,.-_-0>.w-1,.-_-0>.-w-1,.-_-0>.w-1-,._-0->.w1,.-_-0.li-12>li,.-_-0.-li-12>li,.-_-0.li-12->li,.-_-0.li12>li,._-0->.w-1,._-0->.-w-1,._-0->.w-1-,._-0->.w1,._-0-.li-12>li,._-0-.-li-12>li,._-0-.li-12->li,._-0-.li12>li,._0>.w-1,._0>.-w-1,._0>.w-1-,._0>.w1,._0.li-12>li,._0.-li-12>li,._0.li-12->li,._0.li12>li{width:var(--1)}
 ._-0>.w-1h,._-0>.-w-1h,._-0>.w-1h-,._-0>.w1h,._-0.li-8>li,._-0.-li-8>li,._-0.li-8->li,._-0.li8>li,.-_-0>.w-1h,.-_-0>.-w-1h,.-_-0>.-w-1h-,.-_-0>.w1h,.-_-0.li-8>li,.-_-0.-li-8>li,.-_-0.li-8->li,.-_-0.li8>li,._-0->.w-1h,._-0->.-w-1h,._-0->.w-1h-,._-0->.w1h,._-0-.li-8>li,._-0-.-li-8>li,._-0-.li-8->li,._-0-.li8>li,._0>.w-1h,._0>.-w-1h,._0>.w-1h-,._0>.w1h,._0.li-8>li,._0.-li-8>li,._0.li-8->li,._0.li8>li{width:var(--1h)}
@@ -412,8 +411,8 @@ ul.grid.li-auto._-0>li,ul.grid.-li-auto.-_-0>li,ul.grid.li-auto-._-0->li,ul.grid
 ._-0>.ml-11h,._-0>.-ml-11h,._-0>.ml-11h-,._-0>.ml11h,.-_-0>.ml-11h,.-_-0>.-ml-11h,.-_-0>.ml-11h-,.-_-0>.ml11h,._-0->.ml-11h,._-0->.-ml-11h,._-0->.ml-11h-,._-0->.ml11h,._0>.ml-11h,._0>.-ml-11h,._0>.ml-11h-,._0>.ml11h{margin-left:var(--11h)}
 }
 @media(min-width: 1024px){
-.grid._0-,.grid._0->.cell,.grid._0->li,.grid._-0-,.grid._-0->.cell,.grid._-0->li,.grid._0,.grid._0>.cell,.grid._0>li{margin: 0}
-ul.grid.liauto-._0->li,ul.grid.li-auto-._-0->li,ul.grid.liauto._0>li,.grid._0>.cell,.grid._0>li{width:var(--12)}
+.grid._0-,.grid._-0-,.grid._0,.grid._0->.cell,.grid._-0->.cell,.grid._0>.cell,.grid._0->li,.grid._-0->li,.grid._0>li{margin: 0}
+._0->.cell,._-0->.cell,._0>.cell,.grid._0->li,.grid._-0->li,.grid._0>li{width:var(--12)}
 ._0->.w0h-,._0->.w-0h-,._0->.w0h,._-0->.w0h-,._-0->.w-0h-,._-0->.w0h,._0>.w0h-,._0>.w-0h-,._0>.w0h{width:var(--0h)}
 ._0->.w1-,._0->.w-1-,._0->.w1,._0-.li12->li,_0-.li-12->li,_0-.li12>li,._-0->.w1-,._-0->.w-1-,._-0->.w1,._-0-.li12->li,._-0-.li-12->li,._-0-.li12>li,._0>.w1-,._0>.w-1-,._0>.w1,._0.li12->li,._0.li-12->li,._0.li12>li{width:var(--1)}
 ._0->.w1h-,._0->.w-1h-,._0->.w1h,._0-.li8->li,._0-.li-8->li,._0-.li8>li,._-0->.w1h-,._-0->.w-1h-,._-0->.w1h,._-0-.li8->li,._-0-.li-8->li,._-0-.li8>li,._0>.w1h-,._0>.w-1h-,._0>.w1h,._0.li8->li,._0.li-8->li,._0.li8>li{width:var(--1h)}
