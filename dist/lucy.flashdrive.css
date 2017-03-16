@@ -291,7 +291,7 @@ ul.grid{padding-left:0}
 /*
 customizable Dash-grid - with paddings
 */
-._>.cell{padding:0 -5px}
+._>.cell{padding:0 5px}
 ._.grid>li{padding:5px}
 
 ._.-_0,._.-_-0,._._0,
@@ -657,7 +657,7 @@ flex alignment along the x/y axis:start(0%), center(50%), end(100%)
 ._>.ml11-,._>.ml-11-,._>.ml11{margin-left:91.6667%}
 ._>.ml11h-,._>.ml-11h-,._>.ml11h{margin-left:95.8333%}
 
-.ord00-,.ord-00-,.ord0{order:-1}
+.ord0-,.ord-0-,.ord0{order:-1}
 .ord99-,.ord-99-,.ord99{order:99}
 .x0-,.x-0-,.x0{justify-content:flex-start}
 .x50-,.x-50-,.x50{justify-content:center}
